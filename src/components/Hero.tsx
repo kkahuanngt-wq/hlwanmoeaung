@@ -37,6 +37,21 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBooking }) => {
           </span>
         </div>
 
+        {/* Real Artist Portrait Centerpiece in Hero */}
+        <div className="relative mb-6 group">
+          <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full p-1 bg-gradient-to-tr from-[#fbe2a0] via-[#e6c387] to-[#b8934a] shadow-2xl gold-glow group-hover:scale-105 transition-transform duration-500">
+            <img
+              src="./images/hlwan-moe-aung-profile.jpg"
+              alt="KB Hlwan Moe Aung Pianist"
+              className="w-full h-full rounded-full object-cover object-top border-2 border-[var(--bg-primary)]"
+            />
+          </div>
+          <span className="absolute bottom-1 right-2 px-2.5 py-0.5 rounded-full bg-[var(--bg-card)] border border-[var(--border-subtle)] text-[10px] font-bold text-[var(--accent-gold)] shadow flex items-center gap-1">
+            <Award className="w-3 h-3 text-[var(--accent-gold)]" />
+            <span>Verified Artist</span>
+          </span>
+        </div>
+
         {/* Main Name & Title */}
         <div className="space-y-3 mb-6">
           <p className="text-sm sm:text-base font-medium tracking-[0.3em] uppercase text-[var(--accent-gold)] font-serif">
@@ -112,9 +127,9 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBooking }) => {
         {/* Followers / Community Trust Stat */}
         <div className="flex items-center gap-3 text-xs text-[var(--text-muted)]">
           <div className="flex -space-x-2">
-            <img className="inline-block h-7 w-7 rounded-full ring-2 ring-[var(--bg-primary)] object-cover" src="./images/artist-hero.jpg" alt="Avatar" />
-            <img className="inline-block h-7 w-7 rounded-full ring-2 ring-[var(--bg-primary)] object-cover" src="./images/wedding-stage.jpg" alt="Avatar" />
-            <img className="inline-block h-7 w-7 rounded-full ring-2 ring-[var(--bg-primary)] object-cover" src="./images/piano-keys.jpg" alt="Avatar" />
+            <img className="inline-block h-8 w-8 rounded-full ring-2 ring-[var(--bg-primary)] object-cover" src="./images/hlwan-moe-aung-profile.jpg" alt="KB Hlwan Moe Aung" />
+            <img className="inline-block h-8 w-8 rounded-full ring-2 ring-[var(--bg-primary)] object-cover" src="./images/activity-3.jpg" alt="Band Performance" />
+            <img className="inline-block h-8 w-8 rounded-full ring-2 ring-[var(--bg-primary)] object-cover" src="./images/activity-8.jpg" alt="Wedding Duet" />
           </div>
           <span>{t.hero.activeListeners}</span>
         </div>

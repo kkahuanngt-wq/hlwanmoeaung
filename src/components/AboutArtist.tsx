@@ -34,9 +34,9 @@ export const AboutArtist: React.FC<AboutArtistProps> = ({ currentLang }) => {
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md rounded-3xl overflow-hidden border border-[var(--border-subtle)] shadow-2xl gold-glow group">
               <img
-                src="./images/artist-hero.jpg"
+                src="./images/hlwan-moe-aung-profile.jpg"
                 alt="KB Hlwan Moe Aung Pianist"
-                className="w-full h-[460px] object-cover group-hover:scale-105 transition-transform duration-700 brightness-95"
+                className="w-full h-[460px] object-cover object-top group-hover:scale-105 transition-transform duration-700 brightness-95"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-transparent opacity-90"></div>
 
