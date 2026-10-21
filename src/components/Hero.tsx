@@ -53,16 +53,23 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBooking }) => {
         </div>
 
         {/* Main Name & Title */}
-        <div className="space-y-3 mb-6">
-          <p className="text-sm sm:text-base font-medium tracking-[0.3em] uppercase text-[var(--accent-gold)] font-serif">
+        <div className="space-y-2 mb-6">
+          <p className="text-xs sm:text-sm font-medium tracking-[0.35em] uppercase text-[var(--accent-gold)] font-serif">
             {currentLang === 'en' ? 'Concert Pianist & Musical Director' : 'စန္ဒရားနှင့် တေးဂီတပညာရှင်'}
           </p>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-serif tracking-tight text-[var(--text-primary)]">
-            <span className="text-[var(--accent-gold-light)]">{t.hero.titlePrefix} </span>
-            <span className="gold-gradient-text">{t.hero.titleName}</span>
+
+          {/* TWO BIG LETTERS: KB */}
+          <div className="pt-2 pb-1">
+            <span className="inline-block text-8xl sm:text-9xl md:text-[10rem] lg:text-[12rem] font-black font-serif tracking-widest gold-gradient-text leading-none select-none drop-shadow-2xl">
+              KB
+            </span>
+          </div>
+
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold font-serif tracking-tight text-[var(--text-primary)] uppercase">
+            {currentLang === 'en' ? 'Hlwan Moe Aung' : 'လွှမ်းမိုးအောင်'}
           </h1>
           {currentLang === 'en' && (
-            <p className="font-burmese text-xl sm:text-2xl text-[var(--text-muted)] font-medium tracking-wide">
+            <p className="font-burmese text-xl sm:text-3xl text-[var(--accent-gold-light)]/80 font-medium tracking-wide pt-1">
               လွှမ်းမိုးအောင်
             </p>
           )}

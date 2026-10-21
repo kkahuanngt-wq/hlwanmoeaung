@@ -1,14 +1,13 @@
 import React from 'react';
-import { Users, Music2, Check, ChevronRight, ShieldCheck, Calendar } from 'lucide-react';
+import { Users, Music2, ShieldCheck, Calendar } from 'lucide-react';
 import type { Language } from '../data/translations';
 import { translations } from '../data/translations';
 
 interface BandSectionProps {
   currentLang: Language;
-  onSelectPackage: (packageName: string) => void;
 }
 
-export const BandSection: React.FC<BandSectionProps> = ({ currentLang, onSelectPackage }) => {
+export const BandSection: React.FC<BandSectionProps> = ({ currentLang }) => {
   const t = translations[currentLang];
 
   return (
@@ -67,7 +66,7 @@ export const BandSection: React.FC<BandSectionProps> = ({ currentLang, onSelectP
         </div>
 
         {/* Band Lineup & Key Members */}
-        <div className="mb-20">
+        <div className="mb-16">
           <div className="flex items-center justify-between mb-8">
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[var(--text-primary)] flex items-center gap-2">
               <Music2 className="w-5 h-5 text-[var(--accent-gold)]" />
@@ -98,81 +97,6 @@ export const BandSection: React.FC<BandSectionProps> = ({ currentLang, onSelectP
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Live Performance Packages */}
-        <div className="mb-20">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-2">
-              {t.band.packagesTitle}
-            </h3>
-            <p className="text-xs sm:text-sm text-[var(--text-muted)]">
-              Customized lineups created for wedding banquets, private dinners, and mega festivals.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.band.packages.map((pkg, idx) => {
-              const isPopular = idx === 1 || idx === 2;
-              return (
-                <div
-                  key={idx}
-                  className={`relative rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 shadow-sm ${
-                    isPopular
-                      ? 'bg-[var(--bg-card)] border-2 border-[var(--accent-gold)] shadow-xl gold-glow'
-                      : 'bg-[var(--bg-card)] border border-[var(--border-card)] hover:border-[var(--border-subtle)]'
-                  }`}
-                >
-                  {isPopular && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-[#fbe2a0] to-[#e6c387] text-stone-950 font-bold text-[10px] tracking-widest uppercase shadow">
-                      {pkg.badge}
-                    </div>
-                  )}
-
-                  <div>
-                    {!isPopular && (
-                      <span className="text-[10px] font-semibold text-[var(--accent-gold)] uppercase tracking-wider block mb-2">
-                        {pkg.badge}
-                      </span>
-                    )}
-
-                    <h4 className="font-serif text-lg sm:text-xl font-bold text-[var(--text-primary)] mb-2 mt-2">
-                      {pkg.name}
-                    </h4>
-
-                    <div className="text-[11px] font-medium text-[var(--accent-gold)] bg-[var(--accent-gold)]/10 px-2.5 py-1 rounded-md mb-4 border border-[var(--accent-gold)]/20">
-                      {pkg.suitedFor}
-                    </div>
-
-                    <p className="text-xs text-[var(--text-muted)] leading-relaxed mb-6">
-                      {pkg.details}
-                    </p>
-
-                    <div className="space-y-2 mb-8">
-                      {pkg.features.map((feat, fIdx) => (
-                        <div key={fIdx} className="flex items-start gap-2 text-xs text-[var(--text-secondary)]">
-                          <Check className="w-3.5 h-3.5 text-[var(--accent-gold)] shrink-0 mt-0.5" />
-                          <span>{feat}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <button
-                    onClick={() => onSelectPackage(pkg.name)}
-                    className={`w-full py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all ${
-                      isPopular
-                        ? 'bg-gradient-to-r from-[#fbe2a0] via-[#e6c387] to-[#b8934a] text-stone-950 hover:brightness-110 shadow-md'
-                        : 'bg-[var(--bg-secondary)] hover:bg-[var(--accent-gold)] hover:text-stone-950 text-[var(--text-primary)] border border-[var(--border-card)]'
-                    }`}
-                  >
-                    <span>Inquire for Package</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              );
-            })}
           </div>
         </div>
 

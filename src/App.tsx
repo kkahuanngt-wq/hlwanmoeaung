@@ -38,10 +38,6 @@ export function App() {
     }
   };
 
-  const handleSelectPackage = (packageName: string) => {
-    const text = encodeURIComponent(`Hello KB Hlwan Moe Aung Management, I am interested in booking the "${packageName}" package for an upcoming event.`);
-    window.open(`https://wa.me/959798000000?text=${text}`, '_blank');
-  };
 
   return (
     <div
@@ -68,10 +64,9 @@ export function App() {
         {/* Maestro Biography & Milestones */}
         <AboutArtist currentLang={currentLang} />
 
-        {/* Hlwan Music Band (The Live Ensemble & Packages) */}
+        {/* Hlwan Music Band (The Live Ensemble) */}
         <BandSection
           currentLang={currentLang}
-          onSelectPackage={handleSelectPackage}
         />
 
         {/* Repertoire, Media & Discography */}
