@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Headphones, CheckCircle2, ArrowUpRight } from 'lucide-react';
+import { GraduationCap, Headphones, CheckCircle2, Calendar, ArrowUpRight } from 'lucide-react';
 import type { Language } from '../data/translations';
 import { translations } from '../data/translations';
 
@@ -60,18 +60,16 @@ export const AcademyServices: React.FC<AcademyServicesProps> = ({ currentLang, o
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-6 border-t border-[var(--border-card)]">
-              <a
-                href="https://www.youtube.com/@KBHlwanMoeAung"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-[#fbe2a0] to-[#e6c387] text-stone-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow"
+              <button
+                onClick={onOpenBooking}
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-[#fbe2a0] to-[#e6c387] text-stone-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:brightness-110 active:scale-95 transition-all shadow"
               >
-                <span>Free Masterclass Lessons</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
+                <Calendar className="w-4 h-4 text-stone-950" />
+                <span>{currentLang === 'mm' ? 'သင်တန်းနှင့် အစီအစဉ်များ စုံစမ်းရန်' : 'Inquire for Academy & Masterclasses'}</span>
+              </button>
 
               <span className="text-xs text-[var(--text-muted)]">
-                250k+ Online Students Enrolled
+                {currentLang === 'mm' ? 'စီမံခန့်ခွဲရေးအဖွဲ့ထံ တိုက်ရိုက်ဆက်သွယ်ရန်' : 'Direct Booking & Management Inquiry'}
               </span>
             </div>
           </div>

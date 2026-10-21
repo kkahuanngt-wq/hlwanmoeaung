@@ -107,16 +107,7 @@ export const ContactBooking: React.FC<ContactBookingProps> = ({ currentLang }) =
                 </div>
               </div>
 
-              {/* Direct Booking Action CTA */}
-              <button
-                onClick={handleOpenViber}
-                className="w-full py-4 rounded-2xl bg-gradient-to-r from-[#fbe2a0] via-[#e6c387] to-[#b8934a] text-stone-950 font-black text-sm uppercase tracking-wider flex items-center justify-center gap-2 hover:brightness-110 active:scale-98 transition-all shadow-xl shadow-[#e6c387]/20"
-              >
-                <MessageCircle className="w-5 h-5 text-stone-950" />
-                <span>{t.booking.bookDirectBtn}</span>
-              </button>
-
-              <div className="flex items-center justify-center gap-2 text-xs text-[var(--text-muted)] mt-4">
+              <div className="flex items-center justify-center gap-2 text-xs text-[var(--text-muted)] mt-6">
                 <Clock className="w-3.5 h-3.5 text-[var(--accent-gold)]" />
                 <span>{t.booking.officeHours}</span>
               </div>

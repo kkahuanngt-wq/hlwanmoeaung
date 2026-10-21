@@ -7,7 +7,6 @@ import { MediaRepertoire } from './components/MediaRepertoire';
 import { PerformanceGallery } from './components/PerformanceGallery';
 import { AcademyServices } from './components/AcademyServices';
 import { ContactBooking } from './components/ContactBooking';
-import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
 import type { Language, ThemeMode } from './data/translations';
 
@@ -88,9 +87,6 @@ export function App() {
         <ContactBooking
           currentLang={currentLang}
         />
-
-        {/* Testimonials & Accolades */}
-        <Testimonials currentLang={currentLang} />
       </main>
 
       {/* Footer */}
