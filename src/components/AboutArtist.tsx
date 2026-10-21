@@ -34,7 +34,7 @@ export const AboutArtist: React.FC<AboutArtistProps> = ({ currentLang }) => {
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md rounded-3xl overflow-hidden border border-[var(--border-subtle)] shadow-2xl gold-glow group">
               <img
-                src="https://images.unsplash.com/photo-1520523839898-507121c17240?auto=format&fit=crop&w=800&q=80"
+                src="./images/artist-hero.jpg"
                 alt="KB Hlwan Moe Aung Pianist"
                 className="w-full h-[460px] object-cover group-hover:scale-105 transition-transform duration-700 brightness-95"
               />

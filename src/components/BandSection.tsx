@@ -37,7 +37,7 @@ export const BandSection: React.FC<BandSectionProps> = ({ currentLang, onSelectP
         {/* Hero Banner of the Band */}
         <div className="relative rounded-3xl overflow-hidden border border-[var(--border-subtle)] shadow-2xl mb-20 group">
           <img
-            src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1600&q=80"
+            src="./images/band-live.jpg"
             alt="Hlwan Music Band on Stage"
             className="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-700 brightness-90"
           />

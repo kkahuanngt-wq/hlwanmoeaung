@@ -112,9 +112,9 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBooking }) => {
         {/* Followers / Community Trust Stat */}
         <div className="flex items-center gap-3 text-xs text-[var(--text-muted)]">
           <div className="flex -space-x-2">
-            <img className="inline-block h-7 w-7 rounded-full ring-2 ring-[var(--bg-primary)]" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Avatar" />
-            <img className="inline-block h-7 w-7 rounded-full ring-2 ring-[var(--bg-primary)]" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Avatar" />
-            <img className="inline-block h-7 w-7 rounded-full ring-2 ring-[var(--bg-primary)]" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80" alt="Avatar" />
+            <img className="inline-block h-7 w-7 rounded-full ring-2 ring-[var(--bg-primary)] object-cover" src="./images/artist-hero.jpg" alt="Avatar" />
+            <img className="inline-block h-7 w-7 rounded-full ring-2 ring-[var(--bg-primary)] object-cover" src="./images/wedding-stage.jpg" alt="Avatar" />
+            <img className="inline-block h-7 w-7 rounded-full ring-2 ring-[var(--bg-primary)] object-cover" src="./images/piano-keys.jpg" alt="Avatar" />
           </div>
           <span>{t.hero.activeListeners}</span>
         </div>
