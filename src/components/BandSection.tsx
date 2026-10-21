@@ -11,7 +11,7 @@ export const BandSection: React.FC<BandSectionProps> = ({ currentLang }) => {
   const t = translations[currentLang];
 
   return (
-    <section id="band" className="py-24 relative bg-[var(--bg-secondary)] border-t border-[var(--border-card)]">
+    <section id="band" className="py-16 sm:py-24 relative bg-[var(--bg-secondary)] border-t border-[var(--border-card)] overflow-hidden">
       {/* Background Lighting */}
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[var(--accent-gold)]/5 rounded-full blur-3xl pointer-events-none"></div>
 

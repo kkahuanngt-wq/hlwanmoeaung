@@ -41,7 +41,7 @@ export const PerformanceGallery: React.FC<PerformanceGalleryProps> = ({ currentL
   };
 
   return (
-    <section id="gallery" className="py-24 relative bg-[var(--bg-secondary)] border-t border-[var(--border-card)]">
+    <section id="gallery" className="py-16 sm:py-24 relative bg-[var(--bg-secondary)] border-t border-[var(--border-card)] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">

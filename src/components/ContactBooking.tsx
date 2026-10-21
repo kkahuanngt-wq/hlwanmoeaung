@@ -16,7 +16,7 @@ export const ContactBooking: React.FC<ContactBookingProps> = ({ currentLang }) =
   };
 
   return (
-    <section id="booking" className="py-24 relative bg-[var(--bg-secondary)] border-t border-[var(--border-card)]">
+    <section id="booking" className="py-16 sm:py-24 relative bg-[var(--bg-secondary)] border-t border-[var(--border-card)] overflow-hidden">
       {/* Background Ambience */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-[var(--accent-gold)]/5 rounded-full blur-3xl pointer-events-none"></div>
 

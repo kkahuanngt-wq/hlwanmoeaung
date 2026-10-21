@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
   };
 
   return (
-    <footer id="contact" className="bg-[var(--bg-primary)] border-t border-[var(--border-card)] pt-16 pb-12 relative">
+    <footer id="contact" className="bg-[var(--bg-primary)] border-t border-[var(--border-card)] pt-12 sm:pt-16 pb-10 sm:pb-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Col 1: Brand & Maestro Identity */}

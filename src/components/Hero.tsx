@@ -142,8 +142,8 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBooking }) => {
         </div>
       </div>
 
-      {/* Down Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-[var(--text-muted)] hover:text-[var(--accent-gold)] transition-colors pointer-events-auto">
+      {/* Down Scroll Indicator (Desktop Only) */}
+      <div className="hidden sm:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-1 text-[var(--text-muted)] hover:text-[var(--accent-gold)] transition-colors pointer-events-auto">
         <span className="text-[10px] uppercase tracking-widest">Explore</span>
         <a href="#about" aria-label="Scroll down to About section">
           <ChevronDown className="w-4 h-4 animate-bounce" />
