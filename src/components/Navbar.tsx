@@ -39,11 +39,6 @@ export const Navbar: React.FC<NavbarProps> = ({
     { label: t.nav.booking, href: '#booking' },
   ];
 
-  const cycleTheme = () => {
-    if (currentTheme === 'dark') onSelectTheme('light');
-    else if (currentTheme === 'light') onSelectTheme('royal');
-    else onSelectTheme('dark');
-  };
 
   return (
     <header
@@ -55,17 +50,17 @@ export const Navbar: React.FC<NavbarProps> = ({
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#fbe2a0] via-[#e6c387] to-[#b8934a] p-[1.5px] shadow-lg group-hover:scale-105 transition-transform">
+        <a href="#" className="flex items-center gap-2 sm:gap-3 group shrink-0 min-w-0">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[#fbe2a0] via-[#e6c387] to-[#b8934a] p-[1.5px] shadow-md group-hover:scale-105 transition-transform shrink-0">
             <div className="w-full h-full rounded-full bg-[var(--bg-secondary)] flex items-center justify-center">
-              <span className="font-serif font-bold text-sm tracking-tighter text-[#e6c387]">KB</span>
+              <span className="font-serif font-bold text-xs sm:text-sm tracking-tighter text-[#e6c387]">KB</span>
             </div>
           </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-lg font-bold tracking-wider text-[var(--text-primary)] group-hover:text-[var(--accent-gold)] transition-colors">
+          <div className="flex flex-col min-w-0">
+            <span className="font-serif text-sm sm:text-base md:text-lg font-bold tracking-wider text-[var(--text-primary)] group-hover:text-[var(--accent-gold)] transition-colors whitespace-nowrap">
               HLWAN MOE AUNG
             </span>
-            <span className="text-[10px] tracking-widest uppercase text-[var(--accent-gold)] font-medium">
+            <span className="hidden sm:block text-[9px] sm:text-[10px] tracking-widest uppercase text-[var(--accent-gold)] font-medium whitespace-nowrap">
               Concert Pianist & Bandleader
             </span>
           </div>
@@ -145,20 +140,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
         </div>
 
-        {/* Mobile Hamburger Button */}
-        <div className="flex items-center gap-2 lg:hidden">
-          {/* Quick mobile theme toggle */}
-          <button
-            onClick={cycleTheme}
-            className="p-2 rounded-lg bg-[var(--bg-card)] border border-[var(--border-card)] text-[var(--accent-gold)]"
-            title="Cycle Theme"
-          >
-            {currentTheme === 'dark' ? <Moon className="w-4 h-4" /> : currentTheme === 'light' ? <Sun className="w-4 h-4" /> : <Sparkles className="w-4 h-4" />}
-          </button>
-
+        {/* Mobile Action Controls */}
+        <div className="flex items-center gap-2 lg:hidden shrink-0">
           <button
             onClick={onToggleLang}
-            className="p-1.5 text-xs font-semibold px-2 py-1 rounded bg-[var(--bg-card)] border border-[var(--border-card)] text-[var(--text-primary)]"
+            className="px-2.5 py-1 text-xs font-semibold rounded-lg bg-[var(--bg-card)] border border-[var(--border-card)] text-[var(--text-primary)] hover:border-[var(--accent-gold)] transition-colors"
             title="Toggle Language"
           >
             {currentLang === 'en' ? 'မြန်မာ' : 'EN'}
@@ -166,10 +152,10 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-[var(--text-primary)] hover:text-[var(--accent-gold)] focus:outline-none"
+            className="p-1.5 rounded-lg bg-[var(--bg-card)] border border-[var(--border-card)] text-[var(--text-primary)] hover:text-[var(--accent-gold)] focus:outline-none transition-colors"
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 text-[var(--accent-gold)]" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
