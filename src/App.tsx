@@ -3,33 +3,32 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { AboutArtist } from './components/AboutArtist';
 import { BandSection } from './components/BandSection';
-import { InteractivePiano } from './components/InteractivePiano';
 import { MediaRepertoire } from './components/MediaRepertoire';
 import { PerformanceGallery } from './components/PerformanceGallery';
 import { AcademyServices } from './components/AcademyServices';
-import { BookingEngine } from './components/BookingEngine';
+import { ContactBooking } from './components/ContactBooking';
 import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
-import { AudioPlayerBar } from './components/AudioPlayerBar';
-import type { Language } from './data/translations';
-import { jukeboxAudio, TRACK_LIST } from './utils/audioTracks';
+import type { Language, ThemeMode } from './data/translations';
 
 export function App() {
   const [currentLang, setCurrentLang] = useState<Language>('en');
-  const [isPlayingMusic, setIsPlayingMusic] = useState<boolean>(false);
-  const [currentTrackTitle, setCurrentTrackTitle] = useState<string>('');
-  const [preselectedPackage, setPreselectedPackage] = useState<string>('');
+  const [theme, setTheme] = useState<ThemeMode>(() => {
+    const saved = localStorage.getItem('hma_theme') as ThemeMode;
+    return saved === 'light' || saved === 'royal' || saved === 'dark' ? saved : 'dark';
+  });
 
   useEffect(() => {
-    // Subscribe to global jukebox audio engine
-    jukeboxAudio.subscribe((playing, track) => {
-      setIsPlayingMusic(playing);
-      setCurrentTrackTitle(currentLang === 'mm' ? track.titleMm : track.title);
-    });
-  }, [currentLang]);
+    localStorage.setItem('hma_theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
   const handleToggleLang = () => {
     setCurrentLang((prev) => (prev === 'en' ? 'mm' : 'en'));
+  };
+
+  const handleSelectTheme = (selectedTheme: ThemeMode) => {
+    setTheme(selectedTheme);
   };
 
   const handleOpenBooking = () => {
@@ -40,34 +39,30 @@ export function App() {
   };
 
   const handleSelectPackage = (packageName: string) => {
-    setPreselectedPackage(packageName);
-    handleOpenBooking();
-  };
-
-  const handlePlaySpecificTrack = (trackId: string) => {
-    const idx = TRACK_LIST.findIndex((t) => t.id === trackId);
-    if (idx !== -1) {
-      jukeboxAudio.playTrack(idx);
-    }
+    const text = encodeURIComponent(`Hello KB Hlwan Moe Aung Management, I am interested in booking the "${packageName}" package for an upcoming event.`);
+    window.open(`https://wa.me/959798000000?text=${text}`, '_blank');
   };
 
   return (
-    <div className="min-h-screen bg-[#08090d] text-stone-100 flex flex-col font-sans selection:bg-[#e6c387]/30 selection:text-[#f7e7c4] pb-24">
-      {/* Navigation */}
+    <div
+      data-theme={theme}
+      className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-secondary)] flex flex-col font-sans selection:bg-[var(--accent-gold)]/30 selection:text-[var(--accent-gold-light)] transition-colors duration-300"
+    >
+      {/* Navigation with Theme Switcher & Language Toggle */}
       <Navbar
         currentLang={currentLang}
         onToggleLang={handleToggleLang}
-        isPlayingMusic={isPlayingMusic}
-        currentTrackTitle={currentTrackTitle}
+        currentTheme={theme}
+        onSelectTheme={handleSelectTheme}
         onOpenBooking={handleOpenBooking}
       />
 
-      {/* Hero Section */}
+      {/* Main Content Area */}
       <main className="flex-1">
+        {/* Hero Section */}
         <Hero
           currentLang={currentLang}
           onOpenBooking={handleOpenBooking}
-          isPlayingMusic={isPlayingMusic}
         />
 
         {/* Maestro Biography & Milestones */}
@@ -79,13 +74,9 @@ export function App() {
           onSelectPackage={handleSelectPackage}
         />
 
-        {/* Interactive Virtual Grand Piano Keyboard */}
-        <InteractivePiano currentLang={currentLang} />
-
         {/* Repertoire, Media & Discography */}
         <MediaRepertoire
           currentLang={currentLang}
-          onPlayTrack={handlePlaySpecificTrack}
         />
 
         {/* Live Performance & Visual Moments Gallery */}
@@ -97,10 +88,9 @@ export function App() {
           onOpenBooking={handleOpenBooking}
         />
 
-        {/* Interactive Booking Engine & Price Estimator */}
-        <BookingEngine
+        {/* VIP Booking & Direct Inquiries */}
+        <ContactBooking
           currentLang={currentLang}
-          preselectedPackage={preselectedPackage}
         />
 
         {/* Testimonials & Accolades */}
@@ -109,9 +99,6 @@ export function App() {
 
       {/* Footer */}
       <Footer currentLang={currentLang} />
-
-      {/* Persistent Floating Audio Jukebox Player Bar */}
-      <AudioPlayerBar currentLang={currentLang} />
     </div>
   );
 }

@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Volume2, Music, Menu, X, Globe, Calendar } from 'lucide-react';
-import type { Language } from '../data/translations';
+import { Menu, X, Globe, Calendar, Moon, Sun, Sparkles } from 'lucide-react';
+import type { Language, ThemeMode } from '../data/translations';
 import { translations } from '../data/translations';
-import { jukeboxAudio } from '../utils/audioTracks';
 
 interface NavbarProps {
   currentLang: Language;
   onToggleLang: () => void;
-  isPlayingMusic: boolean;
-  currentTrackTitle: string;
+  currentTheme: ThemeMode;
+  onSelectTheme: (theme: ThemeMode) => void;
   onOpenBooking: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   currentLang,
   onToggleLang,
-  isPlayingMusic,
-  currentTrackTitle,
+  currentTheme,
+  onSelectTheme,
   onOpenBooking,
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,45 +33,51 @@ export const Navbar: React.FC<NavbarProps> = ({
   const navLinks = [
     { label: t.nav.artist, href: '#about' },
     { label: t.nav.band, href: '#band' },
-    { label: t.nav.piano, href: '#piano' },
     { label: t.nav.repertoire, href: '#repertoire' },
+    { label: t.nav.gallery, href: '#gallery' },
     { label: t.nav.academy, href: '#academy' },
-    { label: t.nav.contact, href: '#contact' },
+    { label: t.nav.booking, href: '#booking' },
   ];
+
+  const cycleTheme = () => {
+    if (currentTheme === 'dark') onSelectTheme('light');
+    else if (currentTheme === 'light') onSelectTheme('royal');
+    else onSelectTheme('dark');
+  };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#0a0c13]/90 backdrop-blur-md border-b border-[#e6c387]/20 py-3 shadow-2xl'
-          : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5'
+          ? 'glass-panel py-3 shadow-xl'
+          : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#fbe2a0] via-[#e6c387] to-[#b8934a] p-[1.5px] shadow-lg shadow-[#e6c387]/20 group-hover:scale-105 transition-transform">
-            <div className="w-full h-full rounded-full bg-[#0d0e15] flex items-center justify-center">
-              <span className="font-serif font-bold text-sm tracking-tighter text-[#fbe2a0]">KB</span>
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#fbe2a0] via-[#e6c387] to-[#b8934a] p-[1.5px] shadow-lg group-hover:scale-105 transition-transform">
+            <div className="w-full h-full rounded-full bg-[var(--bg-secondary)] flex items-center justify-center">
+              <span className="font-serif font-bold text-sm tracking-tighter text-[#e6c387]">KB</span>
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="font-serif text-lg font-bold tracking-wider text-stone-100 group-hover:text-[#fbe2a0] transition-colors">
+            <span className="font-serif text-lg font-bold tracking-wider text-[var(--text-primary)] group-hover:text-[var(--accent-gold)] transition-colors">
               HLWAN MOE AUNG
             </span>
-            <span className="text-[10px] tracking-widest uppercase text-[#e6c387]/80 font-medium">
-              Pianist & Hlwan Music Band
+            <span className="text-[10px] tracking-widest uppercase text-[var(--accent-gold)] font-medium">
+              Concert Pianist & Bandleader
             </span>
           </div>
         </a>
 
         {/* Desktop Nav Items */}
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-xs uppercase tracking-widest font-medium text-stone-300 hover:text-[#fbe2a0] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#e6c387] hover:after:w-full after:transition-all"
+              className="text-xs uppercase tracking-widest font-medium text-[var(--text-secondary)] hover:text-[var(--accent-gold)] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[var(--accent-gold)] hover:after:w-full after:transition-all"
             >
               {link.label}
             </a>
@@ -80,44 +85,51 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Action Controls */}
-        <div className="hidden sm:flex items-center gap-4">
-          {/* Audio Playing Pill / Toggle */}
-          <button
-            onClick={() => jukeboxAudio.togglePlay()}
-            title={isPlayingMusic ? 'Pause Music' : 'Play Music'}
-            className={`flex items-center gap-2.5 px-3 py-1.5 rounded-full text-xs transition-all border ${
-              isPlayingMusic
-                ? 'bg-[#e6c387]/15 border-[#e6c387]/40 text-[#fbe2a0]'
-                : 'bg-stone-900/60 border-stone-800 text-stone-400 hover:text-stone-200 hover:border-stone-700'
-            }`}
-          >
-            {isPlayingMusic ? (
-              <>
-                <div className="flex items-end gap-[2px] h-3.5">
-                  <span className="w-1 bg-[#e6c387] rounded-full wave-bar"></span>
-                  <span className="w-1 bg-[#e6c387] rounded-full wave-bar"></span>
-                  <span className="w-1 bg-[#e6c387] rounded-full wave-bar"></span>
-                  <span className="w-1 bg-[#e6c387] rounded-full wave-bar"></span>
-                </div>
-                <span className="max-w-[110px] truncate text-[11px] font-medium">
-                  {currentTrackTitle || t.nav.listenNow}
-                </span>
-              </>
-            ) : (
-              <>
-                <Volume2 className="w-3.5 h-3.5 text-stone-400" />
-                <span className="text-[11px]">{t.nav.listenNow}</span>
-              </>
-            )}
-          </button>
+        <div className="hidden sm:flex items-center gap-3">
+          {/* Theme Switcher Toggle */}
+          <div className="flex items-center rounded-full p-1 bg-[var(--bg-card)] border border-[var(--border-subtle)] shadow-sm">
+            <button
+              onClick={() => onSelectTheme('dark')}
+              className={`p-1.5 rounded-full transition-all ${
+                currentTheme === 'dark'
+                  ? 'bg-[#e6c387] text-stone-950 shadow'
+                  : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
+              }`}
+              title="Dark Mode (Obsidian Gold)"
+            >
+              <Moon className="w-3.5 h-3.5" />
+            </button>
+            <button
+              onClick={() => onSelectTheme('light')}
+              className={`p-1.5 rounded-full transition-all ${
+                currentTheme === 'light'
+                  ? 'bg-[#b38628] text-white shadow'
+                  : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
+              }`}
+              title="Light Mode (Concert Ivory)"
+            >
+              <Sun className="w-3.5 h-3.5" />
+            </button>
+            <button
+              onClick={() => onSelectTheme('royal')}
+              className={`p-1.5 rounded-full transition-all ${
+                currentTheme === 'royal'
+                  ? 'bg-[#f3ce7a] text-blue-950 shadow'
+                  : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
+              }`}
+              title="Royal Mode (Midnight Velvet)"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+            </button>
+          </div>
 
           {/* Language Switcher */}
           <button
             onClick={onToggleLang}
-            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs font-medium text-stone-300 hover:text-white bg-stone-900/50 hover:bg-stone-800/80 border border-stone-800 transition-colors"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] bg-[var(--bg-card)] border border-[var(--border-card)] hover:border-[var(--border-subtle)] transition-colors"
             title="Switch Language (မြန်မာ / English)"
           >
-            <Globe className="w-3.5 h-3.5 text-[#e6c387]" />
+            <Globe className="w-3.5 h-3.5 text-[var(--accent-gold)]" />
             <span className={currentLang === 'en' ? 'font-burmese text-[11px]' : 'text-xs'}>
               {t.nav.langToggle}
             </span>
@@ -135,18 +147,26 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Mobile Hamburger Button */}
         <div className="flex items-center gap-2 lg:hidden">
+          {/* Quick mobile theme toggle */}
+          <button
+            onClick={cycleTheme}
+            className="p-2 rounded-lg bg-[var(--bg-card)] border border-[var(--border-card)] text-[var(--accent-gold)]"
+            title="Cycle Theme"
+          >
+            {currentTheme === 'dark' ? <Moon className="w-4 h-4" /> : currentTheme === 'light' ? <Sun className="w-4 h-4" /> : <Sparkles className="w-4 h-4" />}
+          </button>
+
           <button
             onClick={onToggleLang}
-            className="p-2 text-stone-300 hover:text-white"
+            className="p-1.5 text-xs font-semibold px-2 py-1 rounded bg-[var(--bg-card)] border border-[var(--border-card)] text-[var(--text-primary)]"
             title="Toggle Language"
           >
-            <span className="text-xs font-semibold px-2 py-1 rounded bg-stone-900 border border-stone-800">
-              {currentLang === 'en' ? 'မြန်မာ' : 'EN'}
-            </span>
+            {currentLang === 'en' ? 'မြန်မာ' : 'EN'}
           </button>
+
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-stone-200 hover:text-[#e6c387] focus:outline-none"
+            className="p-2 text-[var(--text-primary)] hover:text-[var(--accent-gold)] focus:outline-none"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -156,30 +176,39 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0d0e15]/98 border-b border-[#e6c387]/20 px-6 py-6 shadow-2xl backdrop-blur-xl animate-fadeIn">
+        <div className="lg:hidden bg-[var(--bg-card)] border-b border-[var(--border-subtle)] px-6 py-6 shadow-2xl backdrop-blur-xl animate-fadeIn">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-medium tracking-wide text-stone-300 hover:text-[#fbe2a0] py-2 border-b border-stone-800/60"
+                className="text-sm font-medium tracking-wide text-[var(--text-secondary)] hover:text-[var(--accent-gold)] py-2 border-b border-[var(--border-card)]"
               >
                 {link.label}
               </a>
             ))}
 
             <div className="pt-2 flex flex-col gap-3">
-              <button
-                onClick={() => {
-                  jukeboxAudio.togglePlay();
-                  setMobileMenuOpen(false);
-                }}
-                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-stone-900 border border-stone-800 text-stone-300 text-xs font-medium"
-              >
-                <Music className="w-4 h-4 text-[#e6c387]" />
-                <span>{isPlayingMusic ? 'Pause Music' : t.nav.listenNow}</span>
-              </button>
+              {/* Theme selector in mobile menu */}
+              <div className="flex items-center justify-between p-2 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-card)] text-xs">
+                <span className="text-[var(--text-muted)]">Theme Mode:</span>
+                <div className="flex gap-1">
+                  {(['dark', 'light', 'royal'] as ThemeMode[]).map((m) => (
+                    <button
+                      key={m}
+                      onClick={() => onSelectTheme(m)}
+                      className={`px-2.5 py-1 rounded-md text-[11px] font-medium capitalize ${
+                        currentTheme === m
+                          ? 'bg-[var(--accent-gold)] text-stone-950 font-bold'
+                          : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
+                      }`}
+                    >
+                      {m}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
               <button
                 onClick={() => {

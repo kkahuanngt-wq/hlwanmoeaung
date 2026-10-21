@@ -1,17 +1,22 @@
 export type Language = 'en' | 'mm';
+export type ThemeMode = 'dark' | 'light' | 'royal';
 
 export const translations = {
   en: {
+    themes: {
+      dark: 'Obsidian Dark',
+      light: 'Concert Ivory',
+      royal: 'Midnight Velvet',
+    },
     nav: {
-      artist: 'Maestro',
+      artist: 'The Maestro',
       band: 'Hlwan Music Band',
-      piano: 'Virtual Piano',
-      repertoire: 'Music & Videos',
+      repertoire: 'Repertoire',
+      gallery: 'Gallery',
       academy: 'Academy & Studio',
-      booking: 'Book The Band',
+      booking: 'VIP Booking',
       contact: 'Contact',
       langToggle: 'မြန်မာ',
-      listenNow: 'Listen Live',
     },
     hero: {
       statusBadge: 'Now Booking 2026/2027 Concerts, Weddings & Tours',
@@ -19,9 +24,9 @@ export const translations = {
       titleName: 'Hlwan Moe Aung',
       tagline: 'Concert Pianist • Music Producer • Founder & Leader of Hlwan Music Band',
       subtext: 'Harmonizing Myanmar\'s timeless melodic soul with modern classical grandeur and electrifying live band performances across Southeast Asia.',
-      playPianoBtn: 'Play Virtual Piano',
+      exploreRepertoireBtn: 'Explore Repertoire',
       bookBandBtn: 'Book Hlwan Music Band',
-      listenTrack: 'Play Signature Music',
+      meetArtistBtn: 'About The Maestro',
       activeListeners: '250,000+ Music Enthusiasts & Followers Worldwide',
     },
     stats: {
@@ -94,23 +99,6 @@ export const translations = {
         }
       ]
     },
-    piano: {
-      badge: 'Interactive Experience',
-      title: 'Touch the Keys of Hlwan Moe Aung',
-      subtitle: 'Play our real Web Audio synthesized Grand Piano keyboard directly in your browser. Click, touch, or use your computer keyboard keys.',
-      presetLabel: 'Sound Preset',
-      presets: {
-        grand: 'Concert Grand Piano',
-        rhodes: 'Electric Rhodes',
-        ambient: 'Cinematic Ambient',
-        musicbox: 'Celesta Music Box'
-      },
-      sustainLabel: 'Sustain Pedal',
-      keyShortcuts: 'Computer Keys Enabled: Z to M & Q to U',
-      playDemo: 'Play Signature Melody',
-      playingDemo: 'Playing "Soul of Irrawaddy"...',
-      stopDemo: 'Stop Melody'
-    },
     repertoire: {
       badge: 'Media & Discography',
       title: 'Signature Repertoire & Concert Media',
@@ -120,9 +108,7 @@ export const translations = {
       filterBand: 'Live Band',
       filterTutorial: 'Masterclasses',
       filterTraditional: 'Traditional Arrangements',
-      listenTrack: 'Play In Audio Bar',
       watchVideo: 'Watch Video Performance',
-      sheetMusic: 'Sheet Music & Chords',
     },
     academy: {
       badge: 'Education & Sound Production',
@@ -136,23 +122,16 @@ export const translations = {
       featuresS: ['Acoustic Grand Piano Tracking', 'Full Band Multitrack Live Recording', 'Custom Song Writing & Production', 'Digital Mixing & Mastering for Streaming']
     },
     booking: {
-      badge: 'Reserve Your Date',
-      title: 'Book Hlwan Moe Aung & The Band',
-      subtitle: 'Inquire for upcoming weddings, corporate galas, concert tours, and private bookings across Myanmar and internationally.',
-      calculatorTitle: 'Interactive Booking Calculator',
-      selectEvent: 'Select Event Type',
-      selectPackage: 'Choose Band Arrangement',
-      dateLabel: 'Event Date',
-      locationLabel: 'Event City / Location',
-      nameLabel: 'Your Full Name / Organization',
-      phoneLabel: 'Phone / Viber Number',
-      emailLabel: 'Email Address',
-      notesLabel: 'Special Requests / Preferred Songs',
-      estPrice: 'Estimated Investment Range',
-      submitBtn: 'Send Booking Inquiry via Viber / WhatsApp',
-      instantContact: 'Need Immediate Confirmation? Call Direct:',
-      successTitle: 'Inquiry Prepared Successfully!',
-      successDesc: 'Thank you for choosing KB Hlwan Moe Aung & Hlwan Music Band. We will review your date and connect with you shortly.'
+      badge: 'Official Booking & Management',
+      title: 'Reserve Hlwan Moe Aung & The Band',
+      subtitle: 'Direct management contacts for upcoming weddings, galas, concert tours, and private bookings across Myanmar and internationally.',
+      directCall: 'Direct Call / Phone Booking',
+      viberChat: 'Viber / WhatsApp Inquiries',
+      emailInquiry: 'Official Management Email',
+      studioLocation: 'Hlwan Music Studio (Yangon)',
+      packageAssistance: 'Need help choosing between Solo Piano, Acoustic Trio, or Full 7-Piece Band? Our management team will tailor the musical program for your exact venue and guest list.',
+      bookDirectBtn: 'Message on Viber / WhatsApp Now',
+      officeHours: 'Monday – Sunday: 9:00 AM – 9:00 PM (MMT)',
     },
     testimonials: {
       badge: 'Accolades',
@@ -169,16 +148,20 @@ export const translations = {
     }
   },
   mm: {
+    themes: {
+      dark: 'အမှောင်ရောင် (Dark)',
+      light: 'အလင်းရောင် (Light)',
+      royal: 'စင်တင်ခရမ်းပြာ (Royal)',
+    },
     nav: {
       artist: 'စန္ဒရားပညာရှင်',
       band: 'လွှမ်း Music Band',
-      piano: 'စန္ဒရားတီးခတ်ရန်',
-      repertoire: 'တေးသီချင်းနှင့် ဗီဒီယိုများ',
+      repertoire: 'တေးလက်ရာများ',
+      gallery: 'ဓာတ်ပုံမှတ်တမ်း',
       academy: 'သင်တန်းနှင့် စတူဒီယို',
-      booking: 'ငှားရမ်းရန်',
-      contact: 'ဆက်သွယ်ရန်',
+      booking: 'ငှားရမ်းဆက်သွယ်ရန်',
+      contact: 'လိပ်စာ',
       langToggle: 'English',
-      listenNow: 'တိုက်ရိုက်နားဆင်ရန်',
     },
     hero: {
       statusBadge: '၂၀၂၆ / ၂၀၂၇ မင်္ဂလာဆောင်နှင့် ဖျော်ဖြေပွဲများ စတင်လက်ခံနေပါပြီ',
@@ -186,9 +169,9 @@ export const translations = {
       titleName: 'လွှမ်းမိုးအောင်',
       tagline: 'စန္ဒရားပညာရှင် • တေးဂီတဖန်တီးသူ • လွှမ်း Music Band အဖွဲ့ခေါင်းဆောင်',
       subtext: 'မြန်မာ့ရိုးရာ သံစဉ်နူးညံ့မှုနှင့် ခေတ်မီ နိုင်ငံတကာ စန္ဒရားသံစဉ်များ၊ အကောင်းဆုံး Live Band တူရိယာလက်စုံ ဖျော်ဖြေမှုများဖြင့် ပရိသတ်တို့၏ နှလုံးသားကို ဖမ်းစားသူ။',
-      playPianoBtn: 'စန္ဒရားကိုယ်တိုင်တီးကြည့်ရန်',
+      exploreRepertoireBtn: 'တေးလက်ရာများ ကြည့်ရှုရန်',
       bookBandBtn: 'လွှမ်း Music Band ငှားရမ်းရန်',
-      listenTrack: 'လက်ရွေးစင်တေးများ နားဆင်ရန်',
+      meetArtistBtn: 'အနုပညာခရီးစဉ်',
       activeListeners: 'YouTube & လူမှုကွန်ရက် ပရိသတ် ၂ သိန်းခွဲကျော်နှင့် အတူ',
     },
     stats: {
@@ -261,23 +244,6 @@ export const translations = {
         }
       ]
     },
-    piano: {
-      badge: 'ကိုယ်တိုင်တီးခတ်ကြည့်ရန်',
-      title: 'လွှမ်းမိုးအောင်၏ စန္ဒရားခလုတ်များကို စမ်းသပ်ပါ',
-      subtitle: 'သင့် Browser ပေါ်တွင် အသံထွက်အစစ်အမှန် စန္ဒရားကို Mouse၊ လက်ချောင်း (Touch) သို့မဟုတ် ကွန်ပျူတာ Keyboard ခလုတ်များဖြင့် တီးခတ်နိုင်ပါသည်။',
-      presetLabel: 'အသံစတိုင်လ် ရွေးချယ်ရန်',
-      presets: {
-        grand: 'Concert Grand Piano',
-        rhodes: 'Electric Rhodes',
-        ambient: 'Cinematic Ambient',
-        musicbox: 'Celesta Music Box'
-      },
-      sustainLabel: 'Sustain အသံဆွဲဆိုင်းခလုတ်',
-      keyShortcuts: 'ကီးဘုတ် ခလုတ်များ: Z မှ M နှင့် Q မှ U အထိ',
-      playDemo: 'စံပြ သံစဉ်နားဆင်ရန်',
-      playingDemo: '"ဧရာဝတီသံစဉ်" တီးခတ်နေပါသည်...',
-      stopDemo: 'ရပ်တန့်ရန်'
-    },
     repertoire: {
       badge: 'တေးလက်ရာများနှင့် ဗီဒီယိုများ',
       title: 'ထင်ရှားသော စန္ဒရားတေးများနှင့် ဖျော်ဖြေမှုများ',
@@ -287,9 +253,7 @@ export const translations = {
       filterBand: 'Live Band တီးဝိုင်း',
       filterTutorial: 'ကီးဘုတ် သင်ခန်းစာများ',
       filterTraditional: 'ရိုးရာသံစဉ်များ',
-      listenTrack: 'အသံဖွင့် နားဆင်ရန်',
       watchVideo: 'ဗီဒီယိုကြည့်ရှုရန်',
-      sheetMusic: 'စန္ဒရား သင်္ကေတနှင့် Chord များ',
     },
     academy: {
       badge: 'ဂီတပညာနှင့် တေးသံသွင်း',
@@ -303,23 +267,16 @@ export const translations = {
       featuresS: ['Acoustic စန္ဒရား တိုက်ရိုက်သံသွင်းမှု', 'Live Band အဖွဲ့စုံ သံသွင်းခြင်း', 'ရုပ်ရှင်နှင့် ကြော်ငြာ တေးဂီတ ဖန်တီးခြင်း', 'Streaming အတွက် အဆင့်မြင့် Mastering']
     },
     booking: {
-      badge: 'ရက်ချိန်း ရယူရန်',
+      badge: 'တရားဝင် ငှားရမ်းဆက်သွယ်ရန်',
       title: 'လွှမ်းမိုးအောင်နှင့် တီးဝိုင်းကို ငှားရမ်းရန်',
-      subtitle: 'မင်္ဂလာဆောင်၊ နှစ်ပတ်လည်ပွဲ၊ တေးဂီတပွဲကြီးများနှင့် သီးသန့်ပွဲများအတွက် ဆက်သွယ်စုံစမ်းနိုင်ပါသည်။',
-      calculatorTitle: 'ကုန်ကျစရိတ်နှင့် ပက်ကေ့ချ် တွက်ချက်ရန်',
-      selectEvent: 'အခမ်းအနား အမျိုးအစား',
-      selectPackage: 'တီးဝိုင်း ပက်ကေ့ချ် ရွေးချယ်ပါ',
-      dateLabel: 'ကျင်းပမည့် နေ့ရက်',
-      locationLabel: 'ကျင်းပမည့် မြို့ / နေရာ',
-      nameLabel: 'သင့်အမည် / ကုမ္ပဏီအမည်',
-      phoneLabel: 'ဖုန်း / Viber နံပါတ်',
-      emailLabel: 'အီးမေးလ် လိပ်စာ',
-      notesLabel: 'အထူးမှာကြားလိုသည်များ / သီချင်းရွေးချယ်မှု',
-      estPrice: 'ခန့်မှန်း ကုန်ကျစရိတ်',
-      submitBtn: 'Viber / WhatsApp မှတစ်ဆင့် တိုက်ရိုက်ဆက်သွယ်မည်',
-      instantContact: 'အရေးပေါ် ရက်ချိန်းများအတွက် တိုက်ရိုက်ဖုန်းခေါ်ဆိုရန်:',
-      successTitle: 'အချက်အလက် ပို့ဆောင်ရန် အဆင်သင့်ဖြစ်ပါပြီ!',
-      successDesc: 'KB လွှမ်းမိုးအောင် နှင့် လွှမ်း Music Band ကို ရွေးချယ်သည့်အတွက် ကျေးဇူးတင်ရှိပါသည်။ မကြာမီ အကြောင်းပြန်ပေးပါမည်။'
+      subtitle: 'မင်္ဂလာဆောင်၊ နှစ်ပတ်လည်ပွဲ၊ တေးဂီတပွဲကြီးများနှင့် သီးသန့်ပွဲများအတွက် တိုက်ရိုက် ဆက်သွယ်စုံစမ်းနိုင်ပါသည်။',
+      directCall: 'တိုက်ရိုက် ဖုန်းခေါ်ဆို၍ စုံစမ်းရန်',
+      viberChat: 'Viber / WhatsApp ဖြင့် စာပို့ရန်',
+      emailInquiry: 'တရားဝင် အီးမေးလ် လိပ်စာ',
+      studioLocation: 'လွှမ်း Music Studio (ရန်ကုန်မြို့)',
+      packageAssistance: 'စန္ဒရားတစ်ကိုယ်တော်၊ Acoustic Trio သို့မဟုတ် လွှမ်း Music Band အဖွဲ့ပြည့် ရွေးချယ်မှုအတွက် သင့်လျော်သော အစီအစဉ်ကို ဆွေးနွေးတိုင်ပင်နိုင်ပါသည်။',
+      bookDirectBtn: 'Viber / WhatsApp မှတစ်ဆင့် တိုက်ရိုက် မက်ဆေ့ခ်ျပို့ရန်',
+      officeHours: 'တနင်္လာ မှ တနင်္ဂနွေ - နံနက် ၉:၀၀ မှ ည ၉:၀၀ အထိ',
     },
     testimonials: {
       badge: 'ပရိသတ်နှင့် ဖောက်သည်များ၏ စကားသံ',

@@ -41,18 +41,18 @@ export const PerformanceGallery: React.FC<PerformanceGalleryProps> = ({ currentL
   };
 
   return (
-    <section className="py-24 relative bg-[#090a10]">
+    <section id="gallery" className="py-24 relative bg-[var(--bg-secondary)] border-t border-[var(--border-card)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#e6c387]/10 border border-[#e6c387]/25 text-[#fbe2a0] text-xs font-semibold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[var(--accent-gold)]/10 border border-[var(--border-subtle)] text-[var(--accent-gold)] text-xs font-semibold uppercase tracking-widest mb-3">
             <Camera className="w-3.5 h-3.5" />
             <span>{currentLang === 'mm' ? 'အမှတ်တရ ဓာတ်ပုံများ' : 'Visual Gallery'}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-[var(--text-primary)] tracking-tight mb-4">
             {currentLang === 'mm' ? 'စင်တင်နှင့် မင်္ဂလာပွဲ မှတ်တမ်းများ' : 'Stage Moments & Live Atmosphere'}
           </h2>
-          <p className="text-stone-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-[var(--text-muted)] text-sm sm:text-base leading-relaxed">
             {currentLang === 'mm'
               ? 'လွှမ်းမိုးအောင် နှင့် လွှမ်း Music Band တို့၏ စင်တင်အမှတ်တရ ဓာတ်ပုံများကို ရှုစားပါ။'
               : 'Glimpses of live tour arenas, grand ballrooms, and focused studio sessions.'}
@@ -67,8 +67,8 @@ export const PerformanceGallery: React.FC<PerformanceGalleryProps> = ({ currentL
               onClick={() => setFilter(c.key as typeof filter)}
               className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
                 filter === c.key
-                  ? 'bg-[#e6c387] text-stone-950 font-bold shadow'
-                  : 'bg-stone-900 text-stone-300 hover:text-white border border-stone-800'
+                  ? 'bg-[var(--accent-gold)] text-stone-950 font-bold shadow'
+                  : 'bg-[var(--bg-card)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-[var(--border-card)]'
               }`}
             >
               {c.label}
@@ -82,14 +82,14 @@ export const PerformanceGallery: React.FC<PerformanceGalleryProps> = ({ currentL
             <div
               key={item.id}
               onClick={() => openLightbox(idx)}
-              className="relative rounded-3xl overflow-hidden cursor-pointer group h-80 border border-stone-800 hover:border-[#e6c387]/50 transition-all duration-500 shadow-xl"
+              className="relative rounded-3xl overflow-hidden cursor-pointer group h-80 border border-[var(--border-card)] hover:border-[var(--border-subtle)] transition-all duration-500 shadow-lg"
             >
               <img
                 src={item.image}
                 alt={item.title}
                 className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 brightness-90"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-black/30 to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
 
               {/* Hover Zoom Icon */}
               <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 border border-stone-700 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -98,13 +98,13 @@ export const PerformanceGallery: React.FC<PerformanceGalleryProps> = ({ currentL
 
               {/* Caption Overlay */}
               <div className="absolute bottom-4 left-4 right-4">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#e6c387] mb-1 block">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--accent-gold)] mb-1 block">
                   {item.date} • {item.category}
                 </span>
                 <h4 className="font-serif text-lg font-bold text-white group-hover:text-[#fbe2a0] transition-colors line-clamp-1">
                   {currentLang === 'mm' ? item.titleMm : item.title}
                 </h4>
-                <p className="text-xs text-stone-400 mt-1 line-clamp-2">
+                <p className="text-xs text-stone-300 mt-1 line-clamp-2">
                   {currentLang === 'mm' ? item.captionMm : item.caption}
                 </p>
               </div>

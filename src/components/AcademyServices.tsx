@@ -12,18 +12,18 @@ export const AcademyServices: React.FC<AcademyServicesProps> = ({ currentLang, o
   const t = translations[currentLang];
 
   return (
-    <section id="academy" className="py-24 relative bg-[#08090d] border-t border-stone-800">
+    <section id="academy" className="py-24 relative bg-[var(--bg-primary)] border-t border-[var(--border-card)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#e6c387]/10 border border-[#e6c387]/25 text-[#fbe2a0] text-xs font-semibold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[var(--accent-gold)]/10 border border-[var(--border-subtle)] text-[var(--accent-gold)] text-xs font-semibold uppercase tracking-widest mb-3">
             <GraduationCap className="w-3.5 h-3.5" />
             <span>{t.academy.badge}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-[var(--text-primary)] tracking-tight mb-4">
             {t.academy.title}
           </h2>
-          <p className="text-stone-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-[var(--text-muted)] text-sm sm:text-base leading-relaxed">
             {t.academy.subtitle}
           </p>
         </div>
@@ -31,35 +31,35 @@ export const AcademyServices: React.FC<AcademyServicesProps> = ({ currentLang, o
         {/* 2-Column Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Card 1: Keyboard & Piano Academy */}
-          <div className="rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-[#12141f] via-[#0d0e16] to-[#12141f] border border-[#e6c387]/30 shadow-2xl relative overflow-hidden group hover:border-[#e6c387]/60 transition-all duration-300">
+          <div className="rounded-3xl p-8 sm:p-10 bg-[var(--bg-card)] border border-[var(--border-subtle)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-gold)] transition-all duration-300">
             {/* Ambient Background Glow */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div className="w-12 h-12 rounded-2xl bg-[#e6c387]/15 border border-[#e6c387]/40 flex items-center justify-center mb-6">
-              <GraduationCap className="w-6 h-6 text-[#fbe2a0]" />
+            <div className="w-12 h-12 rounded-2xl bg-[var(--accent-gold)]/15 border border-[var(--accent-gold)]/30 flex items-center justify-center mb-6">
+              <GraduationCap className="w-6 h-6 text-[var(--accent-gold)]" />
             </div>
 
-            <span className="text-xs uppercase tracking-widest font-bold text-[#e6c387] mb-2 block">
+            <span className="text-xs uppercase tracking-widest font-bold text-[var(--accent-gold)] mb-2 block">
               Education & Mentorship
             </span>
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
               {t.academy.academyTitle}
             </h3>
-            <p className="text-xs sm:text-sm text-stone-300 leading-relaxed mb-8">
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mb-8">
               {t.academy.academyDesc}
             </p>
 
             {/* Feature points */}
             <div className="space-y-3 mb-10">
               {t.academy.featuresA.map((feat, idx) => (
-                <div key={idx} className="flex items-center gap-3 text-xs sm:text-sm text-stone-200">
-                  <CheckCircle2 className="w-4 h-4 text-[#e6c387] shrink-0" />
+                <div key={idx} className="flex items-center gap-3 text-xs sm:text-sm text-[var(--text-secondary)]">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--accent-gold)] shrink-0" />
                   <span>{feat}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 pt-6 border-t border-stone-800">
+            <div className="flex flex-col sm:flex-row items-center gap-4 pt-6 border-t border-[var(--border-card)]">
               <a
                 href="https://www.youtube.com/@KBHlwanMoeAung"
                 target="_blank"
@@ -70,51 +70,51 @@ export const AcademyServices: React.FC<AcademyServicesProps> = ({ currentLang, o
                 <ArrowUpRight className="w-4 h-4" />
               </a>
 
-              <span className="text-xs text-stone-400">
+              <span className="text-xs text-[var(--text-muted)]">
                 250k+ Online Students Enrolled
               </span>
             </div>
           </div>
 
           {/* Card 2: Hlwan Music Studio Yangon */}
-          <div className="rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-[#12141f] via-[#0d0e16] to-[#12141f] border border-stone-800 shadow-2xl relative overflow-hidden group hover:border-[#e6c387]/60 transition-all duration-300">
+          <div className="rounded-3xl p-8 sm:p-10 bg-[var(--bg-card)] border border-[var(--border-card)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-gold)] transition-all duration-300">
             {/* Ambient Background Glow */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div className="w-12 h-12 rounded-2xl bg-stone-800 border border-stone-700 flex items-center justify-center mb-6">
-              <Headphones className="w-6 h-6 text-[#fbe2a0]" />
+            <div className="w-12 h-12 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-card)] flex items-center justify-center mb-6">
+              <Headphones className="w-6 h-6 text-[var(--accent-gold)]" />
             </div>
 
-            <span className="text-xs uppercase tracking-widest font-bold text-[#e6c387] mb-2 block">
+            <span className="text-xs uppercase tracking-widest font-bold text-[var(--accent-gold)] mb-2 block">
               Audio Production & Tracking
             </span>
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
               {t.academy.studioTitle}
             </h3>
-            <p className="text-xs sm:text-sm text-stone-300 leading-relaxed mb-8">
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mb-8">
               {t.academy.studioDesc}
             </p>
 
             {/* Feature points */}
             <div className="space-y-3 mb-10">
               {t.academy.featuresS.map((feat, idx) => (
-                <div key={idx} className="flex items-center gap-3 text-xs sm:text-sm text-stone-200">
-                  <CheckCircle2 className="w-4 h-4 text-[#e6c387] shrink-0" />
+                <div key={idx} className="flex items-center gap-3 text-xs sm:text-sm text-[var(--text-secondary)]">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--accent-gold)] shrink-0" />
                   <span>{feat}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 pt-6 border-t border-stone-800">
+            <div className="flex flex-col sm:flex-row items-center gap-4 pt-6 border-t border-[var(--border-card)]">
               <button
                 onClick={onOpenBooking}
-                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-[#fbe2a0] border border-[#e6c387]/40 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow"
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[var(--bg-secondary)] hover:bg-[var(--accent-gold)] hover:text-stone-950 text-[var(--text-primary)] border border-[var(--border-card)] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow"
               >
                 <span>Book Studio Session</span>
                 <ArrowUpRight className="w-4 h-4" />
               </button>
 
-              <span className="text-xs text-stone-400">
+              <span className="text-xs text-[var(--text-muted)]">
                 Bahan Township, Yangon, Myanmar
               </span>
             </div>

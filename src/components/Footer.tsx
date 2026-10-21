@@ -15,28 +15,28 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
   };
 
   return (
-    <footer id="contact" className="bg-[#050608] border-t border-stone-900 pt-16 pb-12 relative">
+    <footer id="contact" className="bg-[var(--bg-primary)] border-t border-[var(--border-card)] pt-16 pb-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Col 1: Brand & Maestro Identity */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#fbe2a0] to-[#b8934a] p-[1.5px]">
-                <div className="w-full h-full rounded-full bg-[#0a0b10] flex items-center justify-center">
-                  <span className="font-serif font-bold text-sm text-[#fbe2a0]">KB</span>
+                <div className="w-full h-full rounded-full bg-[var(--bg-secondary)] flex items-center justify-center">
+                  <span className="font-serif font-bold text-sm text-[var(--accent-gold)]">KB</span>
                 </div>
               </div>
               <div>
-                <h3 className="font-serif text-lg font-bold text-white tracking-wider">
+                <h3 className="font-serif text-lg font-bold text-[var(--text-primary)] tracking-wider">
                   HLWAN MOE AUNG
                 </h3>
-                <p className="text-[10px] uppercase tracking-widest text-[#e6c387]">
+                <p className="text-[10px] uppercase tracking-widest text-[var(--accent-gold)] font-medium">
                   Pianist & Bandleader
                 </p>
               </div>
             </div>
 
-            <p className="text-xs text-stone-400 leading-relaxed">
+            <p className="text-xs text-[var(--text-muted)] leading-relaxed">
               {t.footer.bio}
             </p>
 
@@ -45,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
                 href="https://www.youtube.com/@KBHlwanMoeAung"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-stone-900 hover:bg-red-600 text-stone-300 hover:text-white flex items-center justify-center transition-colors border border-stone-800"
+                className="w-9 h-9 rounded-full bg-[var(--bg-secondary)] hover:bg-red-600 text-[var(--text-muted)] hover:text-white flex items-center justify-center transition-colors border border-[var(--border-card)]"
                 aria-label="YouTube Channel"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-stone-900 hover:bg-blue-600 text-stone-300 hover:text-white flex items-center justify-center transition-colors border border-stone-800"
+                className="w-9 h-9 rounded-full bg-[var(--bg-secondary)] hover:bg-blue-600 text-[var(--text-muted)] hover:text-white flex items-center justify-center transition-colors border border-[var(--border-card)]"
                 aria-label="Facebook Page"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -65,7 +65,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
               </a>
               <a
                 href="mailto:contact@hlwanmoeaung.com"
-                className="w-9 h-9 rounded-full bg-stone-900 hover:bg-[#e6c387] hover:text-stone-950 text-stone-300 flex items-center justify-center transition-colors border border-stone-800"
+                className="w-9 h-9 rounded-full bg-[var(--bg-secondary)] hover:bg-[var(--accent-gold)] hover:text-stone-950 text-[var(--text-muted)] flex items-center justify-center transition-colors border border-[var(--border-card)]"
                 aria-label="Email Maestro"
               >
                 <Mail className="w-4 h-4" />
@@ -75,37 +75,37 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
 
           {/* Col 2: Navigation Links */}
           <div className="space-y-4">
-            <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-[#e6c387]">
+            <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-[var(--accent-gold)]">
               {t.footer.quickLinks}
             </h4>
-            <ul className="space-y-2 text-xs text-stone-400">
+            <ul className="space-y-2 text-xs text-[var(--text-muted)]">
               <li>
-                <a href="#about" className="hover:text-[#fbe2a0] transition-colors">
+                <a href="#about" className="hover:text-[var(--accent-gold)] transition-colors">
                   {t.nav.artist}
                 </a>
               </li>
               <li>
-                <a href="#band" className="hover:text-[#fbe2a0] transition-colors">
+                <a href="#band" className="hover:text-[var(--accent-gold)] transition-colors">
                   {t.nav.band}
                 </a>
               </li>
               <li>
-                <a href="#piano" className="hover:text-[#fbe2a0] transition-colors">
-                  {t.nav.piano}
-                </a>
-              </li>
-              <li>
-                <a href="#repertoire" className="hover:text-[#fbe2a0] transition-colors">
+                <a href="#repertoire" className="hover:text-[var(--accent-gold)] transition-colors">
                   {t.nav.repertoire}
                 </a>
               </li>
               <li>
-                <a href="#academy" className="hover:text-[#fbe2a0] transition-colors">
+                <a href="#gallery" className="hover:text-[var(--accent-gold)] transition-colors">
+                  {t.nav.gallery}
+                </a>
+              </li>
+              <li>
+                <a href="#academy" className="hover:text-[var(--accent-gold)] transition-colors">
                   {t.nav.academy}
                 </a>
               </li>
               <li>
-                <a href="#booking" className="hover:text-[#fbe2a0] transition-colors">
+                <a href="#booking" className="hover:text-[var(--accent-gold)] transition-colors">
                   {t.nav.booking}
                 </a>
               </li>
@@ -114,23 +114,23 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
 
           {/* Col 3: Direct Inquiries */}
           <div className="space-y-4">
-            <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-[#e6c387]">
+            <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-[var(--accent-gold)]">
               {t.footer.contactInfo}
             </h4>
-            <div className="space-y-3 text-xs text-stone-300">
+            <div className="space-y-3 text-xs text-[var(--text-secondary)]">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#e6c387] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[var(--accent-gold)] shrink-0 mt-0.5" />
                 <span>{t.footer.studioAddress}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#e6c387] shrink-0" />
-                <a href="tel:+959798000000" className="hover:text-[#fbe2a0] transition-colors">
+                <Phone className="w-4 h-4 text-[var(--accent-gold)] shrink-0" />
+                <a href="tel:+959798000000" className="hover:text-[var(--accent-gold)] transition-colors">
                   +95 9 798 000 000 (Viber & Call)
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#e6c387] shrink-0" />
-                <a href="mailto:booking@hlwanmusicband.com" className="hover:text-[#fbe2a0] transition-colors">
+                <Mail className="w-4 h-4 text-[var(--accent-gold)] shrink-0" />
+                <a href="mailto:booking@hlwanmusicband.com" className="hover:text-[var(--accent-gold)] transition-colors">
                   booking@hlwanmusicband.com
                 </a>
               </div>
@@ -139,26 +139,26 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
 
           {/* Col 4: Performance Guarantee */}
           <div className="space-y-4">
-            <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-[#e6c387]">
+            <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-[var(--accent-gold)]">
               Hlwan Music Band Standard
             </h4>
-            <p className="text-xs text-stone-400 leading-relaxed">
+            <p className="text-xs text-[var(--text-muted)] leading-relaxed">
               Every wedding, gala, and concert performance is backed by dedicated stage sound engineers, redundant instruments, and bespoke musical curation.
             </p>
-            <div className="p-3 rounded-xl bg-stone-900/80 border border-stone-800 text-[11px] text-[#fbe2a0]">
+            <div className="p-3 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-card)] text-[11px] text-[var(--accent-gold)]">
               Official booking contract & rehearsal consultation included with all packages.
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-stone-900/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+        <div className="pt-8 border-t border-[var(--border-card)] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--text-muted)]">
           <p>{t.footer.copyright}</p>
 
           <div className="flex items-center gap-4">
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1.5 text-stone-400 hover:text-[#e6c387] transition-colors"
+              className="flex items-center gap-1.5 text-[var(--text-muted)] hover:text-[var(--accent-gold)] transition-colors"
             >
               <span>Back to Top</span>
               <ArrowUp className="w-3.5 h-3.5" />
