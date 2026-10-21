@@ -21,6 +21,7 @@ export function App() {
   useEffect(() => {
     localStorage.setItem('hma_theme', theme);
     document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.className = `scroll-smooth ${theme}`;
   }, [theme]);
 
   const handleToggleLang = () => {

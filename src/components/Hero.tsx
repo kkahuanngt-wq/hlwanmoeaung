@@ -12,14 +12,14 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBooking }) => {
   const t = translations[currentLang];
 
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center pt-20 sm:pt-28 pb-10 sm:pb-16 overflow-hidden">
+    <section className="relative min-h-[85vh] w-full max-w-full flex items-center justify-center pt-20 sm:pt-28 pb-10 sm:pb-16 overflow-hidden">
       {/* Background Gradients & Ambient Lighting */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Warm Golden Spotlight */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-b from-[#e6c387]/15 via-[#b8934a]/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[450px] bg-gradient-to-b from-[#e6c387]/15 via-[#b8934a]/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
 
-        {/* Diagonal Light Beam / Stage Wash */}
-        <div className="absolute top-0 right-1/4 w-[2px] h-[600px] bg-gradient-to-b from-transparent via-[var(--accent-gold)]/20 to-transparent rotate-45 transform origin-top blur-sm"></div>
+        {/* Diagonal Light Beam / Stage Wash (Desktop Only to prevent mobile overflow) */}
+        <div className="hidden md:block absolute top-0 right-1/4 w-[2px] h-[600px] bg-gradient-to-b from-transparent via-[var(--accent-gold)]/20 to-transparent rotate-45 transform origin-top blur-sm pointer-events-none"></div>
 
         {/* Subtle decorative grid/musical lines */}
         <div className="absolute inset-0 bg-[radial-gradient(var(--accent-gold)_1px,transparent_1px)] [background-size:40px_40px] opacity-[0.04]"></div>

@@ -20,9 +20,9 @@ export const AboutArtist: React.FC<AboutArtistProps> = ({ currentLang }) => {
   ];
 
   return (
-    <section id="about" className="py-16 sm:py-24 relative bg-[var(--bg-primary)] overflow-hidden">
+    <section id="about" className="py-16 sm:py-24 relative bg-[var(--bg-primary)] overflow-hidden w-full max-w-full">
       {/* Background Subtle Ambient */}
-      <div className="absolute top-1/3 left-0 w-96 h-96 bg-[var(--accent-gold)]/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="hidden sm:block absolute top-1/3 left-0 w-80 h-80 bg-[var(--accent-gold)]/5 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}

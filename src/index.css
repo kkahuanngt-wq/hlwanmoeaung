@@ -49,25 +49,31 @@
     --shadow-gold: 0 0 30px rgba(243, 206, 122, 0.28);
   }
 
-  html, body {
+  html {
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
     overflow-x: hidden;
-    position: relative;
-  }
-
-  #root {
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
-    position: relative;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
     background-color: var(--bg-primary);
     color: var(--text-secondary);
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
   }
 
   h1, h2, h3, .font-serif {

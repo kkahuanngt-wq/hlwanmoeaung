@@ -162,7 +162,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[var(--bg-card)] border-b border-[var(--border-subtle)] px-6 py-6 shadow-2xl backdrop-blur-xl animate-fadeIn">
+        <div className="lg:hidden w-full max-w-full bg-[var(--bg-card)] border-b border-[var(--border-subtle)] px-6 py-6 shadow-2xl backdrop-blur-xl animate-fadeIn overflow-hidden">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
