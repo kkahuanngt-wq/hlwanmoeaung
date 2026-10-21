@@ -12,7 +12,7 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBooking }) => {
   const t = translations[currentLang];
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center justify-center pt-20 sm:pt-28 pb-10 sm:pb-16 overflow-hidden">
       {/* Background Gradients & Ambient Lighting */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Warm Golden Spotlight */}
@@ -25,88 +25,88 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBooking }) => {
         <div className="absolute inset-0 bg-[radial-gradient(var(--accent-gold)_1px,transparent_1px)] [background-size:40px_40px] opacity-[0.04]"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         {/* Availability Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--bg-card)] border border-[var(--border-subtle)] shadow-lg shadow-[var(--accent-gold)]/5 mb-6 group hover:border-[var(--accent-gold)] transition-colors">
+        <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-[var(--bg-card)] border border-[var(--border-subtle)] shadow-md shadow-[var(--accent-gold)]/5 mb-4 sm:mb-6 group hover:border-[var(--accent-gold)] transition-colors">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span className="text-xs uppercase tracking-widest text-[var(--accent-gold)] font-medium">
+          <span className="text-[10px] sm:text-xs uppercase tracking-widest text-[var(--accent-gold)] font-medium">
             {t.hero.statusBadge}
           </span>
         </div>
 
         {/* Real Artist Portrait Centerpiece in Hero */}
-        <div className="relative mb-6 group">
-          <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full p-1 bg-gradient-to-tr from-[#fbe2a0] via-[#e6c387] to-[#b8934a] shadow-2xl gold-glow group-hover:scale-105 transition-transform duration-500">
+        <div className="relative mb-4 sm:mb-5 group">
+          <div className="w-24 h-24 sm:w-36 sm:h-36 rounded-full p-1 bg-gradient-to-tr from-[#fbe2a0] via-[#e6c387] to-[#b8934a] shadow-xl gold-glow group-hover:scale-105 transition-transform duration-500">
             <img
               src="./images/hlwan-moe-aung-profile.jpg"
               alt="KB Hlwan Moe Aung Pianist"
               className="w-full h-full rounded-full object-cover object-top border-2 border-[var(--bg-primary)]"
             />
           </div>
-          <span className="absolute bottom-1 right-2 px-2.5 py-0.5 rounded-full bg-[var(--bg-card)] border border-[var(--border-subtle)] text-[10px] font-bold text-[var(--accent-gold)] shadow flex items-center gap-1">
+          <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 px-2 sm:px-2.5 py-0.5 rounded-full bg-[var(--bg-card)] border border-[var(--border-subtle)] text-[9px] sm:text-[10px] font-bold text-[var(--accent-gold)] shadow flex items-center gap-1 whitespace-nowrap">
             <Award className="w-3 h-3 text-[var(--accent-gold)]" />
             <span>Verified Artist</span>
           </span>
         </div>
 
         {/* Main Name & Title */}
-        <div className="space-y-2 mb-6">
-          <p className="text-xs sm:text-sm font-medium tracking-[0.35em] uppercase text-[var(--accent-gold)] font-serif">
+        <div className="space-y-1 sm:space-y-2 mb-3 sm:mb-5">
+          <p className="text-[10px] sm:text-xs font-semibold tracking-[0.25em] sm:tracking-[0.35em] uppercase text-[var(--accent-gold)] font-serif">
             {currentLang === 'en' ? 'Concert Pianist & Musical Director' : 'စန္ဒရားနှင့် တေးဂီတပညာရှင်'}
           </p>
 
-          {/* TWO BIG LETTERS: KB */}
-          <div className="pt-2 pb-1">
-            <span className="inline-block text-8xl sm:text-9xl md:text-[10rem] lg:text-[12rem] font-black font-serif tracking-widest gold-gradient-text leading-none select-none drop-shadow-2xl">
+          {/* TWO BIG LETTERS / LOGOTYPE */}
+          <div className="flex flex-col items-center justify-center pt-1">
+            <span className="text-6xl sm:text-8xl md:text-9xl font-black font-serif tracking-widest gold-gradient-text leading-none select-none drop-shadow-xl">
               KB
             </span>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-serif tracking-tight text-[var(--text-primary)] uppercase mt-1 sm:mt-2">
+              {currentLang === 'en' ? 'Hlwan Moe Aung' : 'လွှမ်းမိုးအောင်'}
+            </h1>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold font-serif tracking-tight text-[var(--text-primary)] uppercase">
-            {currentLang === 'en' ? 'Hlwan Moe Aung' : 'လွှမ်းမိုးအောင်'}
-          </h1>
           {currentLang === 'en' && (
-            <p className="font-burmese text-xl sm:text-3xl text-[var(--accent-gold-light)]/80 font-medium tracking-wide pt-1">
+            <p className="font-burmese text-base sm:text-2xl text-[var(--accent-gold-light)]/85 font-medium tracking-wide">
               လွှမ်းမိုးအောင်
             </p>
           )}
         </div>
 
         {/* Tagline */}
-        <p className="max-w-3xl text-lg sm:text-xl font-light text-[var(--text-primary)] tracking-wide mb-4">
+        <p className="max-w-2xl text-xs sm:text-base font-light text-[var(--text-primary)] tracking-wide mb-2 px-2 leading-relaxed">
           {t.hero.tagline}
         </p>
 
         {/* Description */}
-        <p className="max-w-2xl text-sm sm:text-base text-[var(--text-muted)] font-normal leading-relaxed mb-10">
+        <p className="max-w-xl text-[11px] sm:text-sm text-[var(--text-muted)] font-normal leading-relaxed mb-5 sm:mb-6 px-3">
           {t.hero.subtext}
         </p>
 
         {/* Feature Badges Pill Row */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10 text-xs sm:text-sm text-[var(--text-secondary)] font-medium">
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--bg-card)] border border-[var(--border-card)] shadow-sm">
-            <Award className="w-4 h-4 text-[var(--accent-gold)]" />
+        <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 mb-6 sm:mb-8 text-[11px] sm:text-xs text-[var(--text-secondary)] font-medium max-w-xl px-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--bg-card)] border border-[var(--border-card)] shadow-sm">
+            <Award className="w-3.5 h-3.5 text-[var(--accent-gold)] shrink-0" />
             <span>Concert Grand Pianist</span>
           </div>
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--bg-card)] border border-[var(--border-card)] shadow-sm">
-            <Users className="w-4 h-4 text-[var(--accent-gold)]" />
-            <span>Founder: Hlwan Music Band</span>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--bg-card)] border border-[var(--border-card)] shadow-sm">
+            <Users className="w-3.5 h-3.5 text-[var(--accent-gold)] shrink-0" />
+            <span>Hlwan Music Band</span>
           </div>
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--bg-card)] border border-[var(--border-card)] shadow-sm">
-            <Disc3 className="w-4 h-4 text-[var(--accent-gold)]" />
-            <span>Hlwan Music Studio Yangon</span>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--bg-card)] border border-[var(--border-card)] shadow-sm">
+            <Disc3 className="w-3.5 h-3.5 text-[var(--accent-gold)] shrink-0" />
+            <span>Hlwan Music Studio</span>
           </div>
         </div>
 
         {/* Clean Call to Actions */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-14">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto mb-8 sm:mb-10 px-4 sm:px-0">
           {/* Primary CTA: Book Band */}
           <button
             onClick={onOpenBooking}
-            className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-gradient-to-r from-[#fbe2a0] via-[#e6c387] to-[#b8934a] text-stone-950 font-bold text-sm tracking-wider uppercase shadow-xl shadow-[#e6c387]/20 hover:brightness-110 active:scale-95 transition-all"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full bg-gradient-to-r from-[#fbe2a0] via-[#e6c387] to-[#b8934a] text-stone-950 font-bold text-xs sm:text-sm tracking-wider uppercase shadow-lg shadow-[#e6c387]/20 hover:brightness-110 active:scale-95 transition-all"
           >
             <Calendar className="w-4 h-4 text-stone-950" />
             <span>{t.hero.bookBandBtn}</span>
@@ -115,7 +115,7 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBooking }) => {
           {/* Secondary CTA: Explore Repertoire */}
           <a
             href="#repertoire"
-            className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-[var(--bg-card)] hover:border-[var(--accent-gold)] border border-[var(--border-subtle)] text-[var(--text-primary)] font-semibold text-sm tracking-wide transition-all shadow-sm"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[var(--bg-card)] hover:border-[var(--accent-gold)] border border-[var(--border-subtle)] text-[var(--text-primary)] font-semibold text-xs sm:text-sm tracking-wide transition-all shadow-sm"
           >
             <Sparkles className="w-4 h-4 text-[var(--accent-gold)]" />
             <span>{t.hero.exploreRepertoireBtn}</span>
@@ -124,10 +124,10 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBooking }) => {
           {/* About Artist Link */}
           <a
             href="#about"
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-transparent hover:bg-[var(--bg-card)] text-[var(--text-muted)] hover:text-[var(--text-primary)] font-medium text-sm transition-all"
+            className="w-auto flex items-center justify-center gap-1.5 py-1.5 text-[var(--text-muted)] hover:text-[var(--accent-gold)] font-medium text-xs sm:text-sm transition-colors"
           >
             <span>{t.hero.meetArtistBtn}</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>
 
