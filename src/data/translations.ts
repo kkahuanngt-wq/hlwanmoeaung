@@ -36,20 +36,51 @@ export const translations = {
       studio: 'Studio Masterpieces',
     },
     about: {
-      badge: 'The Maestro\'s Journey',
-      title: 'A Soul Expressed in 88 Keys',
-      p1: 'KB Hlwan Moe Aung (လွှမ်းမိုးအောင်) stands as one of Myanmar\'s most distinguished and versatile contemporary pianists. Starting with rigorous classical piano foundations and deep immersion in authentic traditional Burmese melodic scales (သံစဉ်စစ်စစ်), he developed a signature acoustic touch that captures both delicate romance and grand symphonic power.',
-      p2: 'Recognizing that music shines brightest when shared as an ensemble, Hlwan Moe Aung founded "Hlwan Music Band" — a premier collective of elite instrumentalists, brass players, and vocalists renowned for electrifying wedding galas, state banquets, and music festivals.',
-      p3: 'As a passionate music educator, his keyboard tutorials and harmonic masterclasses have guided over a quarter million aspiring pianists and music lovers across Myanmar and around the world.',
-      quote: '"The piano is not merely wood and steel strings; it is the bridge between human sentiment and the eternal language of harmony."',
-      milestoneTitle: 'Artistic Milestones',
-      milestones: [
-        { year: '2010', title: 'Classical Conservatory Honors', desc: 'Advanced keyboard and harmonic analysis certification.' },
-        { year: '2015', title: 'Founding Hlwan Music Band', desc: 'Assembled Myanmar’s top live musicians for elite events.' },
-        { year: '2019', title: 'YouTube Digital Milestone', desc: 'Surpassed 100k subscribers for piano & keyboard coaching.' },
-        { year: '2023', title: 'Hlwan Music Studio Launch', desc: 'Premier acoustic recording & music production facility.' },
-        { year: '2026', title: 'National & Regional Tours', desc: 'Over 500 headline live band appearances.' }
-      ]
+      badge: 'Artistry & Craft',
+      title: 'What KB Hlwan Moe Aung Works On',
+      subtitle: 'Concert performances, full ensemble arrangements, sound engineering, and multi-instrumental direction.',
+      workItems: [
+        {
+          title: 'Live Concert & Grand Piano Performance',
+          category: 'Stage Performance',
+          desc: 'Headlining live concert stages, wedding march-ins, grand banquets, and acoustic piano recitals. Combining nuanced touch with dynamic stage presence across classical, contemporary pop, and jazz fusion.',
+        },
+        {
+          title: 'Full Band Arrangement & Stage Direction',
+          category: 'Ensemble Direction',
+          desc: 'Directing the 7-piece Hlwan Music Band. Writing custom musical arrangements for rhythm sections, brass/sax ensembles, and guest vocalists to deliver high-energy, seamless live show programming.',
+        },
+        {
+          title: 'Traditional Burmese Melodic Fusion',
+          category: 'Cultural Heritage',
+          desc: 'Arranging authentic Myanmar classical melodies (မဟာဂီတနှင့် ရှေးရိုးသံစဉ်စစ်စစ်) with modern piano voicing and symphonic textures, creating a bridge between Myanmar cultural heritage and contemporary music.',
+        },
+        {
+          title: 'Studio Tracking, Scoring & Audio Production',
+          category: 'Studio Works',
+          desc: 'Operating Hlwan Music Studio Yangon for acoustic grand piano session tracking, vocal recording, film scoring, single track mixing, and commercial audio mastering.',
+        },
+        {
+          title: 'Synthesizer Programming & Sound Design',
+          category: 'Sound Engineering',
+          desc: 'Custom crafting performance voices, multi-layer velocity patches, and custom acoustic grand piano profiles on flagship Yamaha Montage and Roland RD stage workstations.',
+        },
+        {
+          title: 'Keyboard Masterclasses & Music Mentorship',
+          category: 'Education & Community',
+          desc: 'Producing systematic piano tutorials, chord progression analyses, and keyboard masterclasses, empowering over 250,000 musicians and students across YouTube and social platforms.',
+        },
+      ],
+      disciplinesTitle: 'Core Working Disciplines',
+      disciplinesSubtitle: 'The multifaceted professional roles KB Hlwan Moe Aung actively delivers.',
+      disciplines: [
+        { title: 'Concert Grand Soloist', desc: 'Live recitals, acoustic luxury wedding galas, and stage concertos.', tag: 'Concert Stage' },
+        { title: 'Bandleader & Arranger', desc: 'Full ensemble orchestration, brass charts, and dynamic live set curation.', tag: 'Live Band' },
+        { title: 'Studio Producer & Audio Engineer', desc: 'Acoustic multitrack recording, soundtrack scoring, and audio mixing.', tag: 'Studio Production' },
+        { title: 'Synthesizer Sound Programmer', desc: 'Custom velocity-sensitive piano voicing for Yamaha & Roland stage workstations.', tag: 'Sound Design' },
+        { title: 'Educator & Digital Creator', desc: 'Online keyboard tutorials, harmony breakdowns, and hands-on masterclasses.', tag: 'Mentorship' }
+      ],
+      quote: '"Every arrangement is built with meticulous precision — from acoustic piano attack to full band dynamic balance, music is our highest craft."',
     },
     band: {
       badge: 'The Ensemble',
@@ -181,20 +212,51 @@ export const translations = {
       studio: 'စတူဒီယို တေးသံသွင်း လက်ရာများ',
     },
     about: {
-      badge: 'အနုပညာခရီးစဉ်',
-      title: 'ကီးဘုတ် ၈၈ လုံးပေါ်က အနုပညာ အသက်ရှူသံ',
-      p1: 'KB လွှမ်းမိုးအောင် သည် မြန်မာနိုင်ငံ၏ လူကြိုက်အများဆုံးနှင့် အထူးချွန်ဆုံး စန္ဒရား/ကီးဘုတ်ပညာရှင်များထဲတွင် ထင်ရှားသူဖြစ်ပါသည်။ ဂန္ထဝင် စန္ဒရားပညာ အခြေခံခိုင်မာမှုနှင့်အတူ မြန်မာသံစဉ် မဟာဂီတ အဆစ်အပေါက်များကို ခေတ်ပေါ် ဟာမိုနီများနှင့် လှပစွာ ပေါင်းစပ်ဖန်တီးနိုင်သူ ဖြစ်သည်။',
-      p2: 'ဂီတ၏ စွမ်းအားကို ပိုမိုပြည့်စုံစွာ ဖော်ကျူးနိုင်ရန် "လွှမ်း Music Band" ကို ကိုယ်တိုင်တည်ထောင်ကာ အကောင်းဆုံး တူရိယာပညာရှင်များ၊ Saxophone/Brass အဖွဲ့၊ တေးသံရှင်များနှင့်အတူ မင်္ဂလာအခမ်းအနားကြီးများ၊ နိုင်ငံတော်အဆင့် ဧည့်ခံပွဲများနှင့် တေးဂီတဖျော်ဖြေပွဲများစွာကို ဦးဆောင်တင်ဆက်လျက်ရှိသည်။',
-      p3: 'ဂီတမျိုးဆက်သစ်များအတွက် သူ၏ YouTube Channel (KB Hlwan Moe Aung) မှတစ်ဆင့် စန္ဒရား/ကီးဘုတ် လက်ကွက်သင်ခန်းစာများ၊ Chord သီအိုရီများကို စေတနာအပြည့်ဖြင့် မျှဝေလျက်ရှိသည်။',
-      quote: '"စန္ဒရားဆိုတာ သစ်သားနဲ့ သံကြိုးတွေချည်း သက်သက်မဟုတ်ပါဘူး၊ လူသားတို့ရဲ့ ခံစားချက်ကို ထာဝရဂီတနဲ့ ဆက်သွယ်ပေးတဲ့ တံတားတစ်စင်းပါပဲ။"',
-      milestoneTitle: 'မှတ်တိုင်များ',
-      milestones: [
-        { year: '၂၀၁၀', title: 'ဂန္ထဝင် စန္ဒရားသင်ရိုး ပြီးမြောက်ခြင်း', desc: 'စန္ဒရားနှင့် ကီးဘုတ် အဆင့်မြင့် ဟာမိုနီ လက်မှတ်ရရှိ။' },
-        { year: '၂၀၁၅', title: 'လွှမ်း Music Band စတင်ဖွဲ့စည်းခြင်း', desc: 'အဆင့်မြင့် တူရိယာလက်စုံ တိုက်ရိုက်ဖျော်ဖြေရေး တီးဝိုင်း စတင်။' },
-        { year: '၂၀၁၉', title: 'YouTube ပရိသတ် ၁ သိန်းကျော် မှတ်တိုင်', desc: 'စန္ဒရားသင်ခန်းစာများဖြင့် Silver Play Button ရရှိ။' },
-        { year: '၂၀၂၃', title: 'Hlwan Music Studio စတင်ဖွင့်လှစ်ခြင်း', desc: 'ခေတ်မီ အသံသွင်းနှင့် တေးသံစဉ် ဖန်တီးရေး စတူဒီယို။' },
-        { year: '၂၀၂၆', title: 'ပွဲပေါင်း ၅၀၀ ကျော် အောင်မြင်စွာ တင်ဆက်', desc: 'မြန်မာတစ်နိုင်ငံလုံးနှင့် ပြည်ပ အခမ်းအနားများ တင်ဆက်။' }
-      ]
+      badge: 'အနုပညာနှင့် လုပ်ငန်းကဏ္ဍများ',
+      title: 'KB လွှမ်းမိုးအောင် ၏ ဂီတလုပ်ငန်းနှင့် ဖန်တီးမှုလက်ရာများ',
+      subtitle: 'စင်တင်ဖျော်ဖြေပွဲများ၊ တေးသံစဉ်ဖန်တီးမှု၊ စတူဒီယို အသံသွင်းခြင်းနှင့် တီးဝိုင်းဦးစီး တင်ဆက်မှုများ',
+      workItems: [
+        {
+          title: 'စင်တင်ဖျော်ဖြေပွဲနှင့် စန္ဒရားတီးခတ်မှု (Concert Performance)',
+          category: 'စင်တင်ဖျော်ဖြေမှု',
+          desc: 'နိုင်ငံတကာအဆင့် အခမ်းအနားကြီးများ၊ မင်္ဂလာဧည့်ခံပွဲများ၊ ပွဲတော်စတိတ်စင်များနှင့် VIP ညစာစားပွဲများတွင် Grand Piano ဖြင့် နူးညံ့ငြိမ့်ညောင်းသော သံစဉ်များမှသည် တက်ကြွသော ခေတ်ပေါ်သံစဉ်များအထိ ကိုယ်တိုင်တီးခတ်ဖျော်ဖြေခြင်း။',
+        },
+        {
+          title: 'တီးဝိုင်းဦးစီးမှုနှင့် တေးအစီအစဉ် ရေးဆွဲခြင်း (Band Arranging)',
+          category: 'တီးဝိုင်းခေါင်းဆောင်',
+          desc: 'လွှမ်း Music Band ၏ အဖွဲ့ဝင် ၇ ဦး (စန္ဒရား၊ ဂစ်တာ၊ ဘေ့စ်၊ ဒရမ်၊ ဆက်ဆိုဖုန်း၊ အဆို) တို့အတွက် တီးကွက်၊ ဟာမိုနီနှင့် တူရိယာပေါင်းစပ်မှုများကို ကိုယ်တိုင်စီစဉ်ညွှန်ကြားပြီး တစ်ခမ်းတစ်နား တင်ဆက်ပေးခြင်း။',
+        },
+        {
+          title: 'မြန်မာသံစဉ် မဟာဂီတနှင့် ခေတ်ပေါ်ဂီတ ပေါင်းစပ်မှု (Melodic Fusion)',
+          category: 'ရိုးရာနှင့် ခေတ်ပေါ်',
+          desc: 'မြန်မာ့ရိုးရာ မဟာဂီတနှင့် ခေတ်ဟောင်းတေးသီချင်းများ၏ မူရင်းသံစဉ်စစ်စစ် မပျက်စေဘဲ ခေတ်မီ နိုင်ငံတကာ စန္ဒရား Chord များ၊ ဆန်းသစ်သော ဟာမိုနီများဖြင့် ပြန်လည်အသက်သွင်း တီးခတ်ဖန်တီးခြင်း။',
+        },
+        {
+          title: 'စတူဒီယို တေးသံသွင်းနှင့် ဂီတဖန်တီးမှု (Studio Production)',
+          category: 'စတူဒီယို လက်ရာများ',
+          desc: 'Hlwan Music Studio (Yangon) တွင် စန္ဒရားတီးကွက်များ သီးသန့်အသံသွင်းခြင်း၊ တေးသီချင်း အသံသွင်း/အသံဖန်တီးခြင်း၊ ဇာတ်ဝင်တေးများ ရေးစပ်ခြင်းနှင့် Mixing & Mastering လုပ်ငန်းများ လုပ်ဆောင်ခြင်း။',
+        },
+        {
+          title: 'ကီးဘုတ် အသံပိုင်းဆိုင်ရာ ဖန်တီးတီထွင်မှု (Sound Design)',
+          category: 'အသံဖန်တီးမှု',
+          desc: 'စင်တင်ပွဲတိုင်းတွင် အကောင်းဆုံး အသံထွက်ရရှိစေရန် Yamaha Montage နှင့် Roland RD ကီးဘုတ်ကြီးများတွင် စန္ဒရားအသံ၊ ကြိုးတူရိယာအသံများနှင့် Synthesizer အသံများကို ကိုယ်ပိုင်သီးသန့် Patch ပြုလုပ်အသုံးပြုခြင်း။',
+        },
+        {
+          title: 'ဂီတပညာမျှဝေခြင်းနှင့် သင်တန်းများ (Music Education)',
+          category: 'ပညာသင်ကြားရေး',
+          desc: 'စန္ဒရားနှင့် ကီးဘုတ် တီးခတ်လိုသော လူငယ်မျိုးဆက်သစ်များအတွက် YouTube နှင့် လူမှုကွန်ရက်တို့တွင် လက်ကွက်သင်ခန်းစာများ၊ Chord သီအိုရီများနှင့် အခမဲ့/အဆင့်မြင့် မာစတာကလပ်စ်များ စဉ်ဆက်မပြတ် မျှဝေပို့ချခြင်း။',
+        },
+      ],
+      disciplinesTitle: 'အဓိက ဆောင်ရွက်လျက်ရှိသော ဂီတလုပ်ငန်းများ',
+      disciplinesSubtitle: 'KB လွှမ်းမိုးအောင် အချိန်ပြည့် တစိုက်မတ်မတ် ဖန်တီးဆောင်ရွက်နေသော ကဏ္ဍကြီးများ',
+      disciplines: [
+        { title: 'စန္ဒရား တစ်ကိုယ်တော် တီးခတ်ခြင်း', desc: 'ဂန္ထဝင် စန္ဒရားဖျော်ဖြေပွဲများ၊ မင်္ဂလာလျှောက်လမ်းတေးနှင့် VIP ဧည့်ခံပွဲများ တီးခတ်ခြင်း။', tag: 'စင်တင်' },
+        { title: 'လွှမ်း Music Band ဦးစီးညွှန်ကြားခြင်း', desc: 'တီးဝိုင်းတစ်ဖွဲ့လုံးအတွက် တေးအစီအစဉ်များ ရေးဆွဲစီစဉ်ခြင်းနှင့် ဦးဆောင်ဖျော်ဖြေခြင်း။', tag: 'တီးဝိုင်း' },
+        { title: 'တေးသံသွင်းနှင့် ထုတ်လုပ်ရေး', desc: 'Hlwan Music Studio တွင် စန္ဒရားလက်သံသွင်းခြင်း၊ တေးအယ်လ်ဘမ်များနှင့် ရုပ်ရှင်ဇာတ်ဝင်တေးများ ဖန်တီးခြင်း။', tag: 'စတူဒီယို' },
+        { title: 'စင်တင် ကီးဘုတ်အသံ ဖန်တီးခြင်း', desc: 'Yamaha / Roland စတိတ်စင် ကီးဘုတ်ကြီးများအတွက် အသံသီးသန့် Patch ဖန်တီးမှုများ။', tag: 'အသံဖန်တီး' },
+        { title: 'ဂီတပညာ သင်ကြားပို့ချခြင်း', desc: 'စန္ဒရားလက်ကွက်နှင့် သီအိုရီ သင်ခန်းစာများကို ပရိသတ် ၂ သိန်းခွဲကျော်ထံ မျှဝေသင်ကြားခြင်း။', tag: 'သင်တန်း' }
+      ],
+      quote: '"တေးသွားတစ်ခုစီတိုင်းကို စန္ဒရားခလုတ် ထိချက်ကအစ တီးဝိုင်းတစ်ခုလုံးရဲ့ အသံမျှတမှုအထိ အသေးစိတ် အနုစိတ် ဖန်တီးထားပါသည်။"',
     },
     band: {
       badge: 'တီးဝိုင်း မိတ်ဆက်',
