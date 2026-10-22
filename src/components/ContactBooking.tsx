@@ -10,10 +10,6 @@ interface ContactBookingProps {
 export const ContactBooking: React.FC<ContactBookingProps> = ({ currentLang }) => {
   const t = translations[currentLang];
 
-  const handleOpenViber = () => {
-    const text = encodeURIComponent('Hello KB Hlwan Moe Aung & Hlwan Music Band Management, I would like to inquire regarding performance availability and event details.');
-    window.open(`https://wa.me/959798000000?text=${text}`, '_blank');
-  };
 
   return (
     <section id="booking" className="py-16 sm:py-24 relative bg-[var(--bg-secondary)] border-t border-[var(--border-card)] overflow-hidden w-full max-w-full">
@@ -53,11 +49,11 @@ export const ContactBooking: React.FC<ContactBookingProps> = ({ currentLang }) =
                   <span className="text-[11px] uppercase tracking-wider text-[var(--text-muted)] font-semibold block mb-1">
                     {t.booking.directCall}
                   </span>
-                  <a href="tel:+959798000000" className="text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent-gold)] transition-colors block">
-                    +95 9 798 000 000
+                  <a href="tel:+959792970226" className="text-sm font-bold text-[var(--text-primary)] hover:text-[var(--accent-gold)] transition-colors block">
+                    +95 9 792 970 226
                   </a>
-                  <a href="tel:+959420111222" className="text-xs text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors block mt-0.5">
-                    +95 9 420 111 222
+                  <a href="tel:+959422499370" className="text-xs text-[var(--text-muted)] hover:text-[var(--accent-gold)] transition-colors block mt-0.5">
+                    +95 9 422 499 370
                   </a>
                 </div>
 
@@ -69,14 +65,16 @@ export const ContactBooking: React.FC<ContactBookingProps> = ({ currentLang }) =
                   <span className="text-[11px] uppercase tracking-wider text-[var(--text-muted)] font-semibold block mb-1">
                     {t.booking.viberChat}
                   </span>
-                  <button
-                    onClick={handleOpenViber}
+                  <a
+                    href="https://wa.me/959792970226"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:underline block text-left"
                   >
-                    Chat on Viber / WhatsApp
-                  </button>
+                    +95 9 792 970 226
+                  </a>
                   <span className="text-xs text-[var(--text-muted)] block mt-0.5">
-                    Fast response within 1 hour
+                    Viber & WhatsApp Direct
                   </span>
                 </div>
 
@@ -101,8 +99,10 @@ export const ContactBooking: React.FC<ContactBookingProps> = ({ currentLang }) =
                   <span className="text-[11px] uppercase tracking-wider text-[var(--text-muted)] font-semibold block mb-1">
                     {t.booking.studioLocation}
                   </span>
-                  <p className="text-xs font-medium text-[var(--text-primary)]">
-                    Bahan Township, Yangon, Myanmar
+                  <p className="text-xs font-medium text-[var(--text-primary)] leading-relaxed">
+                    {currentLang === 'mm'
+                      ? 'အမှတ် (၉၀၃)၊ မြေညီထပ်၊ မာဃ (၁၂) လမ်း၊ (၁၂) ရပ်ကွက်၊ တောင်ဥက္ကလာပမြို့နယ်၊ ရန်ကုန်မြို့။'
+                      : 'No. 903, Ground Floor, Magha (12) St, (12) Ward, South Okkalapa, Yangon'}
                   </p>
                 </div>
               </div>

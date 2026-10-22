@@ -175,7 +175,7 @@ export const translations = {
       contactInfo: 'Direct Inquiries',
       socials: 'Connect With The Maestro',
       copyright: '© 2026 KB Hlwan Moe Aung & Hlwan Music Band. All rights reserved.',
-      studioAddress: 'Hlwan Music Studio, Bahan Township, Yangon, Myanmar'
+      studioAddress: 'No. 903, Ground Floor, Magha (12) St, (12) Ward, South Okkalapa, Yangon'
     }
   },
   mm: {
@@ -351,7 +351,7 @@ export const translations = {
       contactInfo: 'တိုက်ရိုက် ဆက်သွယ်ရန်',
       socials: 'လူမှုကွန်ရက် စာမျက်နှာများ',
       copyright: '© ၂၀၂၆ KB လွှမ်းမိုးအောင် & Hlwan Music Band. All rights reserved.',
-      studioAddress: 'လွှမ်း Music Studio၊ ဗဟန်းမြို့နယ်၊ ရန်ကုန်မြို့။'
+      studioAddress: 'အမှတ် (၉၀၃)၊ မြေညီထပ်၊ မာဃ (၁၂) လမ်း၊ (၁၂) ရပ်ကွက်၊ တောင်ဥက္ကလာပမြို့နယ်၊ ရန်ကုန်မြို့။'
     }
   }
 };

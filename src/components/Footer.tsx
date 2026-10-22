@@ -124,8 +124,8 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[var(--accent-gold)] shrink-0" />
-                <a href="tel:+959798000000" className="hover:text-[var(--accent-gold)] transition-colors">
-                  +95 9 798 000 000 (Viber & Call)
+                <a href="tel:+959792970226" className="hover:text-[var(--accent-gold)] transition-colors">
+                  +95 9 792 970 226 / 09 422 499 370
                 </a>
               </div>
               <div className="flex items-center gap-2.5">

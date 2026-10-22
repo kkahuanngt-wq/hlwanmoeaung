@@ -113,7 +113,7 @@ export const AcademyServices: React.FC<AcademyServicesProps> = ({ currentLang, o
               </button>
 
               <span className="text-xs text-[var(--text-muted)]">
-                Bahan Township, Yangon, Myanmar
+                {currentLang === 'mm' ? 'တောင်ဥက္ကလာပမြို့နယ်၊ ရန်ကုန်မြို့' : 'South Okkalapa Township, Yangon'}
               </span>
             </div>
           </div>
